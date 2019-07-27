@@ -114,39 +114,6 @@
     </div>
 	
 	<!-- calendar modal -->
-    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
-          </div>
-          <div class="modal-body">
-            <div id="testmodal" style="padding: 5px 20px;">
-              <form id="antoform" class="form-horizontal calender" role="form">
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Title</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="title" name="title">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Description</label>
-                  <div class="col-sm-9">
-                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary antosubmit">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -160,24 +127,55 @@
             <div id="testmodal2" style="padding: 5px 20px;">
               <form id="antoform2" class="form-horizontal calender" role="form">
                 <div class="form-group">
-                  <label class="col-sm-3 control-label">Title</label>
+                  <label class="col-sm-3 control-label">Program</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="title2" name="title2">
+                    <input type="text" class="form-control" id="h_program">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-3 control-label">Description</label>
+                  <label class="col-sm-3 control-label">Name</label>
                   <div class="col-sm-9">
-                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                    <input type="text" class="form-control" id="h_name">
                   </div>
                 </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Email</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="h_email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Phone</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="h_phone">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Guest</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="h_guest">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Language</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="h_language">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Comment</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" style="height:55px;" id="h_comment" ></textarea>
+                  </div>
+                </div>
+
 
               </form>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
           </div>
         </div>
       </div>
@@ -200,6 +198,65 @@
     <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="../build/js/custom1.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+          $.ajax({
+            type: "POST",
+            url : "load_booking.php",
+            dataType: "json",
+            success : function(data, status, xhr) {
+              console.log(data);
+              data.forEach(function(e) {
+                e["start"] = new Date(e["start"]);
+              });
+
+              init_cal(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              console.log(jqXHR.responseText);
+            }
+          });
+		});
+		
+		function init_cal(eventData) {
+			if( typeof ($.fn.fullCalendar) === 'undefined'){ return; }
+			console.log('init_calendar');
+
+			var calendar = $('#calendar').fullCalendar({
+			  header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay,listMonth'
+			  },
+			  selectable: false,
+			  selectHelper: true,
+			  eventClick: function(calEvent, jsEvent, view) {
+				$('#fc_edit').click();
+
+				$('#h_program').val(calEvent.title);
+                $('#h_name').val(calEvent.name);
+                $('#h_email').val(calEvent.email);
+                $('#h_phone').val(calEvent.phone);
+                $('#h_guest').val(calEvent.guest);
+                $('#h_language').val(calEvent.language);
+                $('#h_comment').val(calEvent.comment);
+
+
+				$(".antosubmit2").on("click", function() {
+				  calEvent.title = $("#title2").val();
+
+				  calendar.fullCalendar('updateEvent', calEvent);
+				  $('.antoclose2').click();
+				});
+
+				calendar.fullCalendar('unselect');
+			  },
+			  editable: false,
+			  events: eventData
+			});
+		}
+	</script>
   </body>
 </html>
