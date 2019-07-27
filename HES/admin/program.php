@@ -10,10 +10,6 @@ $result = mysqli_query($conn, $sql);
 
 $program_list = '';
 while ($row = mysqli_fetch_array($result)) {
-	
-	
-	//$program_list = $program_list."<li><a href=\"index.php?id={$row['pk']}\">{$row['title']}</a></li>";
-	
 	$program_list = $program_list
 	."<tr><td>#</td>
 	<td><a>{$row['title']}</a><br /><small>{$row['create_time']}</small></td>
