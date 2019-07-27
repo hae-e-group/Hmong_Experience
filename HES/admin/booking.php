@@ -29,7 +29,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-h-square"></i> <span>HaeTae</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-h-square"></i> <span>HaeTae</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -40,10 +40,10 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="home.html"><i class="fa fa-home"></i> Home </span></a></li>
-				  <li><a href="calendar2.html"><i class="fa fa-calendar"></i> Calendar </span></a></li>
-				  <li><a href="program.html"><i class="fa fa-child"></i> Program </span></a></li>
-				  <li><a href="booking.html"><i class="fa fa-check"></i> Booking </span></a></li>
+                  <li><a href="home.php"><i class="fa fa-home"></i> Home </span></a></li>
+				  <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
+				  <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a></li>
+				  <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
                 </ul>
               </div>
             </div>
