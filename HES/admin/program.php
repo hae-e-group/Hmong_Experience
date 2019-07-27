@@ -70,7 +70,7 @@ while ($row = mysqli_fetch_array($result)) {
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="home.php"><i class="fa fa-home"></i> Home1 </span></a></li>
+                  <li><a href="home.php"><i class="fa fa-home"></i> Home </span></a></li>
 				  <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
 				  <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a></li>
 				  <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
