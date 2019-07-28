@@ -42,7 +42,11 @@
                 <ul class="nav side-menu">
                   <li><a href="home.php"><i class="fa fa-home"></i> Home </span></a></li>
 				  <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
-				  <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a></li>
+				  <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a>
+					<ul class="nav child_menu">
+                      <li><a href="program_image.php">Program updated image</a></li>
+                    </ul>
+				  </li>
 				  <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
                 </ul>
               </div>
@@ -71,11 +75,34 @@
         </div>
         <!-- /top navigation -->
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-          
-        </div>
-        <!-- /page content -->
+          <!-- page content -->
+          <div class="right_col" role="main">
+              <div class="">
+                  <div class="page-title">
+                      <div class="title_left">
+                          <h3>Form Upload </h3>
+                      </div>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="row">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                          <div class="x_panel">
+                              <div class="x_content">
+                                  <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
+                                  <form action="upload_image.php" enctype="multipart/form-data" class="dropzone" id="fileDropzone"></form>
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <br />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- /page content -->
 
         <!-- footer content -->
         <footer>
@@ -97,9 +124,36 @@
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
     <!-- Dropzone.js -->
-    <script src="../vendors/dropzone/dist/min/dropzone1.min.js"></script>
+    <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+
+  <script type="text/javascript">
+      var myDropzone = new Dropzone("#fileDropzone", {
+          url: "upload_image.php",
+          maxFiles:1,
+          acceptedFiles: 'image/*',
+          error: function (file, response) {
+              console.log("Erro");
+              console.log(response);
+          },
+          success: function (file, response) {
+              console.log("Sucesso");
+              console.log(response);
+              console.log(file);
+          },
+          complete: function (file) {
+              console.log("Complete");
+          },
+          init: function() {
+              this.on('addedfile', function(file) {
+                  if (this.files.length > 1) {
+                      this.removeFile(this.files[0]);
+                  }
+              });
+          }
+      });
+  </script>
   </body>
 </html>

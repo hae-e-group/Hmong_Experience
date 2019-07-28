@@ -18,6 +18,8 @@
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Dropzone.css -->
+    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -139,16 +141,23 @@
                           <input id="video" class="form-control col-md-7 col-xs-12" type="text" name="video">
                         </div>
                       </div>
-					  
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button" onclick="location.href='program.php'">Cancel</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                      </div>
+
+                      <input type="hidden" name="image" id="image" value="" />
 
                     </form>
+
+                      <div class="form-group">
+                          <p class="control-label col-md-3 col-sm-3 col-xs-12 col-md-offset-2">Drag image file. Only single image supported.</p>
+                          <form action="upload_image.php" enctype="multipart/form-data" class="col-md-7 col-xs-12 col-md-offset-2 dropzone" id="fileDropzone"></form>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                              <br />
+                              <button class="btn btn-primary" type="button" onclick="location.href='program.php'">Cancel</button>
+                              <button type="button" class="btn btn-success">Submit</button>
+                          </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -176,10 +185,42 @@
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Dropzone.js -->
+    <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+
+    <script type="text/javascript">
+        var myDropzone = new Dropzone("#fileDropzone", {
+            url: "upload_image.php",
+            maxFiles:1,
+            acceptedFiles: 'image/*',
+            error: function (file, response) {
+                console.log(response);
+            },
+            success: function (file, response) {
+                console.log(response);
+                $('#image').val(response);
+            },
+            complete: function (file) {
+                console.log("Complete");
+            },
+            init: function() {
+                this.on('addedfile', function(file) {
+                    if (this.files.length > 1) {
+                        this.removeFile(this.files[0]);
+                    }
+                });
+            }
+        });
+
+        $('.btn-success').on('click', function () {
+           $('#demo-form2').submit();
+        });
+    </script>
+
   </body>
 </html>

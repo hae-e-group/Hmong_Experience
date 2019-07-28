@@ -7,24 +7,26 @@ $conn = mysqli_connect(
 'hmong');
 
 $filtered = array(
-'title' => mysqli_real_escape_string($conn, $_POST['title']),
-'contents' => mysqli_real_escape_string($conn, $_POST['contents']),
-'detail' => mysqli_real_escape_string($conn, $_POST['detail']),
-'price' => mysqli_real_escape_string($conn, $_POST['price']),
-'time' => mysqli_real_escape_string($conn, $_POST['time']),
-'video' => mysqli_real_escape_string($conn, $_POST['video']),
+    'title' => mysqli_real_escape_string($conn, $_POST['title']),
+    'contents' => mysqli_real_escape_string($conn, $_POST['contents']),
+    'detail' => mysqli_real_escape_string($conn, $_POST['detail']),
+    'price' => mysqli_real_escape_string($conn, $_POST['price']),
+    'time' => mysqli_real_escape_string($conn, $_POST['time']),
+    'video' => mysqli_real_escape_string($conn, $_POST['video']),
+    'image' => mysqli_real_escape_string($conn, $_POST['image']),
 );
 
 $sql = "
  INSERT INTO program
-  (title, contents, detail, price, time, video)
+  (title, contents, detail, price, time, video, image)
   VALUES(
 	'{$filtered['title']}',
 	'{$filtered['contents']}',
 	'{$filtered['detail']}',
 	'{$filtered['price']}',
 	'{$filtered['time']}',
-	'{$filtered['video']}'
+	'{$filtered['video']}',
+	'{$filtered['image']}'
   )
 ";
 
