@@ -84,6 +84,7 @@ if (isset($_GET['id'])) {
                                 </ul>
                             </li>
                             <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
+                            <li><a href="inbox.php"><i class="fa fa-check"></i> Inbox </span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -200,7 +201,7 @@ if (isset($_GET['id'])) {
                                             } else {
                                                 echo "<img src='uploads/{$program['image']}' class='col-md-7 col-xs-12' />";
                                             }
-                                        ?>
+                                            ?>
                                         </div>
                                     </div>
 
@@ -209,18 +210,21 @@ if (isset($_GET['id'])) {
                                 </form>
 
                                 <div class="form-group">
-                                    <p class="control-label col-md-3 col-sm-3 col-xs-12 col-md-offset-2">Drag image file. Only single image supported.</p>
-                                    <form action="upload_image.php" enctype="multipart/form-data" class="col-md-7 col-xs-12 col-md-offset-2 dropzone" id="fileDropzone"></form>
+                                    <p class="control-label col-md-3 col-sm-3 col-xs-12 col-md-offset-2">Drag image
+                                        file. Only single image supported.</p>
+                                    <form action="upload_image.php" enctype="multipart/form-data"
+                                          class="col-md-7 col-xs-12 col-md-offset-2 dropzone" id="fileDropzone"></form>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                        <br />
+                                        <br/>
                                         <button class="btn btn-primary" type="button"
                                                 onclick="location.href='program.php'">Cancel
                                         </button>
                                         <button type="submit" class="btn btn-success">Update</button>
-                                        <button type="button" class="btn btn-danger" id="delete_image">Delete Image</button>
+                                        <button type="button" class="btn btn-danger" id="delete_image">Delete Image
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -285,8 +289,8 @@ if (isset($_GET['id'])) {
     });
 
     $('#delete_image').on('click', function () {
-       $('#image').val('');
-       form_submit();
+        $('#image').val('');
+        form_submit();
     });
 
     function form_submit() {

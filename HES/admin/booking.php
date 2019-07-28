@@ -1,10 +1,10 @@
 <?php
 
 $conn = mysqli_connect(
-'localhost',
-'root',
-'q1w2e3r4',
-'hmong');
+    'localhost',
+    'root',
+    'q1w2e3r4',
+    'hmong');
 
 $sql = "SELECT * FROM book WHERE state = 0";
 $result = mysqli_query($conn, $sql);
@@ -14,11 +14,11 @@ $booking_list = '';
 
 $i = 0;
 while ($row = mysqli_fetch_array($result)) {
-	$tr_class = $i++ % 2 == 0 ? "<tr class='even pointer'>" : "<tr class='odd pointer'>";
-	
-	$booking_list = $booking_list
-	.$tr_class
-	."<td class='a-center '><input type='checkbox' data-id='{$row['pk']}' class='flat' name='table_records'></td>
+    $tr_class = $i++ % 2 == 0 ? "<tr class='even pointer'>" : "<tr class='odd pointer'>";
+
+    $booking_list = $booking_list
+        . $tr_class
+        . "<td class='a-center '><input type='checkbox' data-id='{$row['pk']}' class='flat' name='table_records'></td>
 		<td>{$row['name']}</td>
 		<td>{$row['email']}</td>
 		<td>{$row['phone']}</td>
@@ -39,11 +39,11 @@ $result = mysqli_query($conn, $sql);
 $accept_list = '';
 $i = 0;
 while ($row = mysqli_fetch_array($result)) {
-	$tr_class = $i++ % 2 == 0 ? "<tr class='even pointer'>" : "<tr class='odd pointer'>";
-	
-	$accept_list = $accept_list
-	.$tr_class
-	."<td class='a-center '><input type='checkbox' data-id='{$row['pk']}' class='flat' name='table_records'></td>
+    $tr_class = $i++ % 2 == 0 ? "<tr class='even pointer'>" : "<tr class='odd pointer'>";
+
+    $accept_list = $accept_list
+        . $tr_class
+        . "<td class='a-center '><input type='checkbox' data-id='{$row['pk']}' class='flat' name='table_records'></td>
 		<td>{$row['name']}</td>
 		<td>{$row['email']}</td>
 		<td>{$row['phone']}</td>
@@ -61,7 +61,7 @@ while ($row = mysqli_fetch_array($result)) {
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -81,294 +81,303 @@ while ($row = mysqli_fetch_array($result)) {
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-  </head>
+</head>
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
         <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-h-square"></i> <span>HaeTae</span></a>
-            </div>
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index.php" class="site_title"><i class="fa fa-h-square"></i> <span>HaeTae</span></a>
+                </div>
 
-            <div class="clearfix"></div>
-            <br />
+                <div class="clearfix"></div>
+                <br/>
 
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                  <li><a href="home.php"><i class="fa fa-home"></i> Home </span></a></li>
-				  <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
-				  <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a></li>
-				  <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
-                </ul>
-              </div>
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                            <li><a href="home.php"><i class="fa fa-home"></i> Home </span></a></li>
+                            <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
+                            <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a></li>
+                            <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
+                            <li><a href="inbox.php"><i class="fa fa-check"></i> Inbox </span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
             </div>
-            <!-- /sidebar menu -->
-          </div>
         </div>
 
         <!-- top navigation -->
         <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
 
-              <ul class="nav navbar-nav navbar-right">
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa"></i>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li role="presentation" class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
+                               aria-expanded="false">
+                                <i class="fa"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <!-- /top navigation -->
 
-		<!-- page content -->
+        <!-- page content -->
         <div class="right_col" role="main">
-			<div class="">
-				<div class="page-title">
-				  <div class="title_left">
-					<h3>Booking <small>Total booking list</small></h3>
-				  </div>
-				</div>
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Booking <small>Total booking list</small></h3>
+                    </div>
+                </div>
 
-				<div class="clearfix"></div>
-				
-				<div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<div class="x_panel">
-						  <div class="x_title">
-							<h2>Booking Request List <small>Accept or Decline </small></h2>
-							<div class="clearfix"></div>
-						  </div>
-						  
-						  <div class="pull-right">
-								<button type='button' class='btn btn-info' onclick="acceptBook();"> <i class="fa fa-check"></i> Accept </button> <button type='button' class='btn btn-danger' onclick="declineBook('bulk_action1');"> <i class="fa fa-trash"></i> Decline </button>
-						  </div>
-						  
-						  <div class="x_content">
-							<div class="table-responsive">
-							  <table class="table table-striped jambo_table bulk_action1">
-								<thead>
-								  <tr class="headings">
-									<th>
-									  <input type="checkbox" id="check-all" class="flat">
-									</th>
-									<th class="column-title">Name </th>
-									<th class="column-title">Email </th>
-									<th class="column-title">Phone </th>
-									<th class="column-title">Date </th>
-									<th class="column-title">Program </th>
-									<th class="column-title">Guest </th>
-									<th class="column-title">Language </th>
-									<th class="column-title no-link last"><span class="nobr">Comment </span>
-									</th>
-								  </tr>
-								</thead>
+                <div class="clearfix"></div>
 
-								<tbody>
-								  <?=$booking_list?>
-								</tbody>
-							  </table>
-							</div>
-									
-								
-						  </div>
-						</div>
-					  </div>
-				</div>
-				
-				<div class="clearfix"></div>
-				
-				<div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<div class="x_panel">
-						  <div class="x_title">
-							<h2>Booking Accept List <small>You can decline request</small></h2>
-							<div class="clearfix"></div>
-						  </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Booking Request List <small>Accept or Decline </small></h2>
+                                <div class="clearfix"></div>
+                            </div>
 
-						  <div class="pull-right">
-							  <button type='button' class='btn btn-danger' onclick="declineBook('bulk_action2');"> <i class="fa fa-trash"></i> Decline </button>
-						  </div>
+                            <div class="pull-right">
+                                <button type='button' class='btn btn-info' onclick="acceptBook();"><i
+                                            class="fa fa-check"></i> Accept
+                                </button>
+                                <button type='button' class='btn btn-danger' onclick="declineBook('bulk_action1');"><i
+                                            class="fa fa-trash"></i> Decline
+                                </button>
+                            </div>
 
-						  <div class="x_content">
-							<div class="table-responsive">
-							  <table class="table table-striped jambo_table bulk_action2">
-								<thead>
-								  <tr class="headings">
-									<th>
-									  <input type="checkbox" id="check-all" class="flat">
-									</th>
-									<th class="column-title">Name </th>
-									<th class="column-title">Email </th>
-									<th class="column-title">Phone </th>
-									<th class="column-title">Date </th>
-									<th class="column-title">Program </th>
-									<th class="column-title">Guest </th>
-									<th class="column-title">Language </th>
-									<th class="column-title no-link last"><span class="nobr">Comment </span>
-									</th>
-								  </tr>
-								</thead>
+                            <div class="x_content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action1">
+                                        <thead>
+                                        <tr class="headings">
+                                            <th>
+                                                <input type="checkbox" id="check-all" class="flat">
+                                            </th>
+                                            <th class="column-title">Name</th>
+                                            <th class="column-title">Email</th>
+                                            <th class="column-title">Phone</th>
+                                            <th class="column-title">Date</th>
+                                            <th class="column-title">Program</th>
+                                            <th class="column-title">Guest</th>
+                                            <th class="column-title">Language</th>
+                                            <th class="column-title no-link last"><span class="nobr">Comment </span>
+                                            </th>
+                                        </tr>
+                                        </thead>
 
-								<tbody>
-								  <?=$accept_list?>
-								</tbody>
-							  </table>
-							</div>
-									
-								
-						  </div>
-						</div>
-					  </div>
-				</div>
-			</div>
+                                        <tbody>
+                                        <?= $booking_list ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Booking Accept List <small>You can decline request</small></h2>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="pull-right">
+                                <button type='button' class='btn btn-danger' onclick="declineBook('bulk_action2');"><i
+                                            class="fa fa-trash"></i> Decline
+                                </button>
+                            </div>
+
+                            <div class="x_content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action2">
+                                        <thead>
+                                        <tr class="headings">
+                                            <th>
+                                                <input type="checkbox" id="check-all" class="flat">
+                                            </th>
+                                            <th class="column-title">Name</th>
+                                            <th class="column-title">Email</th>
+                                            <th class="column-title">Phone</th>
+                                            <th class="column-title">Date</th>
+                                            <th class="column-title">Program</th>
+                                            <th class="column-title">Guest</th>
+                                            <th class="column-title">Language</th>
+                                            <th class="column-title no-link last"><span class="nobr">Comment </span>
+                                            </th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <?= $accept_list ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /page content -->
-        
+
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right">
-            
-          </div>
-          <div class="clearfix"></div>
+            <div class="pull-right">
+
+            </div>
+            <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
-      </div>
     </div>
+</div>
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="../vendors/iCheck/icheck.min.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom1.min.js"></script>
-	
-	<script type="text/javascript">
-		
-		var checkState = '';
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom1.min.js"></script>
 
-		$('.bulk_action1 input').on('ifChecked', function () {
-			checkState = '';
-			$(this).parent().parent().parent().addClass('selected');
-			countChecked1();
-		});
-		$('.bulk_action1 input').on('ifUnchecked', function () {
-			checkState = '';
-			$(this).parent().parent().parent().removeClass('selected');
-			countChecked1();
-		});
-		$('.bulk_action1 input#check-all').on('ifChecked', function () {
-			checkState = 'all';
-			countChecked1();
-		});
-		$('.bulk_action1 input#check-all').on('ifUnchecked', function () {
-			checkState = 'none';
-			countChecked1();
-		});
-		
-		
-		$('.bulk_action2 input').on('ifChecked', function () {
-			checkState = '';
-			$(this).parent().parent().parent().addClass('selected');
-			countChecked2();
-		});
-		$('.bulk_action2 input').on('ifUnchecked', function () {
-			checkState = '';
-			$(this).parent().parent().parent().removeClass('selected');
-			countChecked2();
-		});
-		$('.bulk_action2 input#check-all').on('ifChecked', function () {
-			checkState = 'all';
-			countChecked2();
-		});
-		$('.bulk_action2 input#check-all').on('ifUnchecked', function () {
-			checkState = 'none';
-			countChecked2();
-		});
-		
+<script type="text/javascript">
 
-		function countChecked1() {
-			if (checkState === 'all') {
-				$(".bulk_action1 input[name='table_records']").iCheck('check');
-			}
-			if (checkState === 'none') {
-				$(".bulk_action1 input[name='table_records']").iCheck('uncheck');
-			}
-		}
-		
-		function countChecked2() {
-			if (checkState === 'all') {
-				$(".bulk_action2 input[name='table_records']").iCheck('check');
-			}
-			if (checkState === 'none') {
-				$(".bulk_action2 input[name='table_records']").iCheck('uncheck');
-			}
-		}
-		
-		function acceptBook() {
-			var checkCount = $(".bulk_action1 input[name='table_records']:checked").length;
-			if (checkCount) {
-				var json = {id:[], mode:1};
-				$(".bulk_action1 input[name='table_records']:checked").each(function(index, item) {
-					json['id'].push($(item).data("id"));
-				});
-				sendServer(json);
-			} else {
-				alert("check item");
-			}
-		}
-		
-		function declineBook(table) {
-			var checkCount = $("." + table + " input[name='table_records']:checked").length;
-			if (checkCount) {
-				var json = {id:[], mode:2};
-				
-				$("." + table + " input[name='table_records']:checked").each(function(index, item) {
-					json['id'].push($(item).data("id"));
-				});
-				sendServer(json);
-			} else {
-				alert("check item");
-			}
-		}
-		
-		function sendServer(json) {
-			console.log(json);
-			$.ajax({
-				type: "POST",
-				url : "accept_booking.php",
-				data: json,
-				dataType: "json",
-				success : function(data, status, xhr) {
-					console.log(data);
-					//alert("Thank you!");
-					window.location.reload();
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					console.log(jqXHR.responseText);
-					//alert("Please check date");
-				}
-			});
-		}
-	</script>
-	
-  </body>
+    var checkState = '';
+
+    $('.bulk_action1 input').on('ifChecked', function () {
+        checkState = '';
+        $(this).parent().parent().parent().addClass('selected');
+        countChecked1();
+    });
+    $('.bulk_action1 input').on('ifUnchecked', function () {
+        checkState = '';
+        $(this).parent().parent().parent().removeClass('selected');
+        countChecked1();
+    });
+    $('.bulk_action1 input#check-all').on('ifChecked', function () {
+        checkState = 'all';
+        countChecked1();
+    });
+    $('.bulk_action1 input#check-all').on('ifUnchecked', function () {
+        checkState = 'none';
+        countChecked1();
+    });
+
+
+    $('.bulk_action2 input').on('ifChecked', function () {
+        checkState = '';
+        $(this).parent().parent().parent().addClass('selected');
+        countChecked2();
+    });
+    $('.bulk_action2 input').on('ifUnchecked', function () {
+        checkState = '';
+        $(this).parent().parent().parent().removeClass('selected');
+        countChecked2();
+    });
+    $('.bulk_action2 input#check-all').on('ifChecked', function () {
+        checkState = 'all';
+        countChecked2();
+    });
+    $('.bulk_action2 input#check-all').on('ifUnchecked', function () {
+        checkState = 'none';
+        countChecked2();
+    });
+
+
+    function countChecked1() {
+        if (checkState === 'all') {
+            $(".bulk_action1 input[name='table_records']").iCheck('check');
+        }
+        if (checkState === 'none') {
+            $(".bulk_action1 input[name='table_records']").iCheck('uncheck');
+        }
+    }
+
+    function countChecked2() {
+        if (checkState === 'all') {
+            $(".bulk_action2 input[name='table_records']").iCheck('check');
+        }
+        if (checkState === 'none') {
+            $(".bulk_action2 input[name='table_records']").iCheck('uncheck');
+        }
+    }
+
+    function acceptBook() {
+        var checkCount = $(".bulk_action1 input[name='table_records']:checked").length;
+        if (checkCount) {
+            var json = {id: [], mode: 1};
+            $(".bulk_action1 input[name='table_records']:checked").each(function (index, item) {
+                json['id'].push($(item).data("id"));
+            });
+            sendServer(json);
+        } else {
+            alert("check item");
+        }
+    }
+
+    function declineBook(table) {
+        var checkCount = $("." + table + " input[name='table_records']:checked").length;
+        if (checkCount) {
+            var json = {id: [], mode: 2};
+
+            $("." + table + " input[name='table_records']:checked").each(function (index, item) {
+                json['id'].push($(item).data("id"));
+            });
+            sendServer(json);
+        } else {
+            alert("check item");
+        }
+    }
+
+    function sendServer(json) {
+        console.log(json);
+        $.ajax({
+            type: "POST",
+            url: "accept_booking.php",
+            data: json,
+            dataType: "json",
+            success: function (data, status, xhr) {
+                console.log(data);
+                //alert("Thank you!");
+                window.location.reload();
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR.responseText);
+                //alert("Please check date");
+            }
+        });
+    }
+</script>
+
+</body>
 </html>
