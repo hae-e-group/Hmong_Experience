@@ -84,7 +84,7 @@ if (isset($_GET['id'])) {
                                 </ul>
                             </li>
                             <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
-                            <li><a href="inbox.php"><i class="fa fa-check"></i> Inbox </span></a></li>
+                            <li><a href="inbox.php"><i class="fa fa-envelope"></i> Inbox </span></a></li>
                         </ul>
                     </div>
                 </div>
