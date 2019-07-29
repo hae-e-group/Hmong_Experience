@@ -276,6 +276,8 @@ while ($row = mysqli_fetch_array($result)) {
     });
 
     function openMail(idx) {
+        $('.inbox-body').hide();
+
         $.ajax({
             type: "POST",
             url : "get_inbox.php",
