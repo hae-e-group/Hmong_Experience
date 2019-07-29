@@ -6,28 +6,26 @@ $conn = mysqli_connect(
     'q1w2e3r4',
     'hmong');
 
-$program = array(
-    'title' => '',
-    'contents' => '',
-    'detail' => '',
-    'price' => '',
-    'time' => '',
-    'video' => '',
+$contact = array(
+    'name' => '',
+    'org' => '',
+    'about' => '',
+    'facebook' => '',
+    'instagram' => '',
     'image' => '');
 
 
 if (isset($_GET['id'])) {
     $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
-    $sql = "SELECT * FROM program WHERE pk={$filtered_id}";
+    $sql = "SELECT * FROM contact WHERE pk={$filtered_id}";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
-    $program['title'] = $row['title'];
-    $program['contents'] = $row['contents'];
-    $program['detail'] = $row['detail'];
-    $program['price'] = $row['price'];
-    $program['time'] = $row['time'];
-    $program['video'] = $row['video'];
-    $program['image'] = $row['image'];
+    $contact['name'] = $row['name'];
+    $contact['org'] = $row['org'];
+    $contact['about'] = $row['about'];
+    $contact['facebook'] = $row['facebook'];
+    $contact['instagram'] = $row['instagram'];
+    $contact['image'] = $row['image'];
 }
 
 ?>
@@ -80,12 +78,16 @@ if (isset($_GET['id'])) {
                             <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
                             <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="program_edit.php">Program edit</a></li>
+                                    <li><a href="program_add.php">Program add</a></li>
                                 </ul>
                             </li>
                             <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
                             <li><a href="inbox.php"><i class="fa fa-envelope"></i> Inbox </span></a></li>
-                            <li><a href="contacts.php"><i class="fa fa-instagram"></i> Contacts </span></a></li>
+                            <li><a href="contacts.php"><i class="fa fa-instagram"></i> Contacts </span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="contacts_edit.php">Contacts edit</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -129,66 +131,56 @@ if (isset($_GET['id'])) {
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Program infomation <small>edit program information</small></h2>
+                                <h2>Program infomation <small>Please fill in forms</small></h2>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
                                 <br/>
                                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                                      action="update_program.php" method="POST">
+                                      action="update_contact.php" method="POST">
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Title <span
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span
                                                     class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="title" required="required"
-                                                   class="form-control col-md-7 col-xs-12" , name="title"
-                                                   value="<?= $program['title'] ?>">
+                                            <input type="text" id="name" required="required"
+                                                   class="form-control col-md-7 col-xs-12" name="name" value="<?= $contact['name'] ?>" />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="contents"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Contents</label>
+                                        <label for="org"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Organization</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="contents" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="contents" value="<?= $program['contents'] ?>">
+                                            <input id="org" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="org" value="<?= $contact['org'] ?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="detail"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Detail</label>
+                                        <label for="about"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">About</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="detail" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="detail" value="<?= $program['detail'] ?>">
+                                            <input id="about" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="about" value="<?= $contact['about'] ?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="price"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Price</label>
+                                        <label for="facebook"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Facebook</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="price" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="price" value="<?= $program['price'] ?>">
+                                            <input id="facebook" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="facebook" value="<?= $contact['facebook'] ?>" />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="time" class="control-label col-md-3 col-sm-3 col-xs-12">Time</label>
+                                        <label for="instagram" class="control-label col-md-3 col-sm-3 col-xs-12">Instagram</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="time" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="time" value="<?= $program['time'] ?>">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="video"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Video</label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="video" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="video" value="<?= $program['video'] ?>">
+                                            <input id="instagram" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="instagram" value="<?= $contact['instagram'] ?>" />
                                         </div>
                                     </div>
 
@@ -197,21 +189,22 @@ if (isset($_GET['id'])) {
                                                class="control-label col-md-3 col-sm-3 col-xs-12">Image</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <?php
-                                            if ($program['image'] == '') {
+                                            if ($contact['image'] == '') {
                                                 echo "<p class='form-control col-md-7 col-xs-12'>None</p>";
                                             } else {
-                                                echo "<img src='uploads/{$program['image']}' class='col-md-7 col-xs-12' />";
+                                                echo "<img src='uploads/{$contact['image']}' class='col-md-7 col-xs-12' />";
                                             }
                                             ?>
                                         </div>
                                     </div>
 
                                     <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
-                                    <input type="hidden" name="image" id="image" value="<?= $program['image'] ?>"/>
+                                    <input type="hidden" name="image" id="image" value="<?= $contact['image'] ?>" />
+
                                 </form>
 
                                 <div class="form-group">
-                                    <p class="control-label col-md-3 col-sm-3 col-xs-12 col-md-offset-2">Drag image
+                                    <p class="control-label col-md-5 col-sm-5 col-xs-12 col-md-offset-2">Drag image
                                         file. Only single image supported.</p>
                                     <form action="upload_image.php" enctype="multipart/form-data"
                                           class="col-md-7 col-xs-12 col-md-offset-2 dropzone" id="fileDropzone"></form>
@@ -221,7 +214,7 @@ if (isset($_GET['id'])) {
                                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                         <br/>
                                         <button class="btn btn-primary" type="button"
-                                                onclick="location.href='program.php'">Cancel
+                                                onclick="location.href='contacts.php'">Cancel
                                         </button>
                                         <button type="submit" class="btn btn-success">Update</button>
                                         <button type="button" class="btn btn-danger" id="delete_image">Delete Image
@@ -255,10 +248,13 @@ if (isset($_GET['id'])) {
 <script src="../vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
 <script src="../vendors/nprogress/nprogress.js"></script>
-<!-- bootstrap-progressbar -->
-<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- Dropzone.js -->
 <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
 
 <script type="text/javascript">
     var myDropzone = new Dropzone("#fileDropzone", {
@@ -286,20 +282,13 @@ if (isset($_GET['id'])) {
 
     $('.btn-success').on('click', function () {
         $('#demo-form2').submit();
-        form_submit();
     });
 
     $('#delete_image').on('click', function () {
         $('#image').val('');
-        form_submit();
-    });
-
-    function form_submit() {
         $('#demo-form2').submit();
-    }
+    });
 </script>
 
-<!-- Custom Theme Scripts -->
-<script src="../build/js/custom.min.js"></script>
 </body>
 </html>
