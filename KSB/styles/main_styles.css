@@ -329,7 +329,7 @@ section
 {
 	width: 130px;
 	height: 41px;
-	border: solid 2px #ffffff;
+	border: solid 2px #b47bff;
 	text-align: center;
 }
 .logo a
@@ -337,7 +337,7 @@ section
 	display: block;
 	font-size: 24px;
 	font-weight: 600;
-	color: #ffffff;
+	color: #b47bff;
 	line-height: 37px;
 }
 .main_nav ul li:not(:last-of-type)
@@ -348,7 +348,7 @@ section
 {
 	font-size: 16px;
 	font-weight: 500;
-	color: #ffffff;
+	color: #c5bfce;
 }
 .main_nav ul li a:hover,
 .main_nav ul li.active a

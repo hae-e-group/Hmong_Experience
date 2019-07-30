@@ -294,7 +294,7 @@ $(document).ready(function()
 			bookingSlider.owlCarousel(
 			{
 				items:3,
-				autoplay:true,
+				autoplay:false,
 				autoplayHoverPause:true,
 				loop:true,
 				smartSpeed:1200,
