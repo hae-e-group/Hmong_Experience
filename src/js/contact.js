@@ -165,7 +165,7 @@ $(document).ready(function()
     	// Initialize a marker
 		marker = new google.maps.Marker({
 			map: map,
-			draggable: true,
+			draggable: false,
 			animation: google.maps.Animation.DROP,
 			position: { lat: 18.7957215, lng: 98.9501414 },
 		});
