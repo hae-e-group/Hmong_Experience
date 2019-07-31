@@ -10,13 +10,9 @@
 3. Header
 4. Menu
 5. Home
-6. Features
-7. Gallery
-8. About
-9. Testimonials
-10. Booking
-11. Blog
-12. Footer
+6. About
+7. Booking
+8. Footer
 
 
 ******************************/
@@ -333,7 +329,7 @@ section
 {
 	width: 130px;
 	height: 41px;
-	border: solid 2px #ffffff;
+	border: solid 2px #b47bff;
 	text-align: center;
 }
 .logo a
@@ -341,7 +337,7 @@ section
 	display: block;
 	font-size: 24px;
 	font-weight: 600;
-	color: #ffffff;
+	color: #b47bff;
 	line-height: 37px;
 }
 .main_nav ul li:not(:last-of-type)
@@ -352,18 +348,18 @@ section
 {
 	font-size: 16px;
 	font-weight: 500;
-	color: #ffffff;
+	color: #c5bfce;
 }
 .main_nav ul li a:hover,
 .main_nav ul li.active a
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .book_button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #b47bff;
 	margin-left: 45px;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
@@ -378,7 +374,7 @@ section
 }
 .book_button:hover a
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .book_button a
 {
@@ -394,7 +390,7 @@ section
 {
 	width: 190px;
 	height: 54px;
-	background: #ffa37b;
+	background: #b47bff;
 	margin-left: 14px;
 }
 .header_phone span
@@ -407,7 +403,7 @@ section
 .header_phone span::selection
 {
 	background: #ffffff;
-	color: #ffa37b;
+	color: #b47bff;
 }
 .hamburger
 {
@@ -427,7 +423,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 
 /*********************************
@@ -471,7 +467,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .menu_nav ul li:not(:last-of-type)
 {
@@ -486,7 +482,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .menu_nav ul li a span
 {
@@ -529,11 +525,11 @@ section
 }
 .menu_book a:hover
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .menu_book a:hover::after
 {
-	background: #ffa37b;
+	background: #b47bff;
 }
 .menu_phone
 {
@@ -553,8 +549,11 @@ section
 
 .home
 {
+	padding-top: 130px;
+	padding-left: 100px;
+	padding-right: 100px;
 	width: 100%;
-	height: 100vh;
+	height: 100vh;	
 }
 .home_slider_container
 {
@@ -590,7 +589,7 @@ section
 .home_slider_custom_dots li.active,
 .home_slider_custom_dots li:hover
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .home_slider .slide
 {
@@ -711,7 +710,7 @@ input[type=number]::-webkit-outer-spin-button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #b47bff;
 	font-size: 14px;
 	font-weight: 500;
 	color: #ffffff;
@@ -725,95 +724,18 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 /*********************************
-6. Features
-*********************************/
-
-.features
-{
-	background: #ffffff;
-	padding-top: 115px;
-	padding-bottom: 24px;
-}
-.icon_box_col
-{
-	margin-bottom: 80px;
-}
-.icon_box_icon
-{
-	width: 82px;
-	height: 82px;
-}
-.icon_box_icon img
-{
-	max-width: 100%;
-	max-height: 100%;
-}
-.icon_box_icon svg
-{
-	max-width: 100%;
-	max-height: 100%;
-}
-.svg path, .svg rect, .svg polygon
-{
-    fill: #a1a1a1;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.icon_box:hover .svg path,
-.icon_box:hover .svg rect,
-.icon_box:hover .svg polygon
-{
-	fill: #ffa37b;
-}
-.icon_box_title
-{
-	margin-top: 16px;
-}
-.icon_box_title h2
-{
-	
-}
-.icon_box_text
-{
-	margin-top: 21px;
-}
-
-/*********************************
-7. Gallery
-*********************************/
-
-.gallery
-{
-	width: 100%;
-}
-.gallery_item
-{
-	height: calc(100vw / 4);
-}
-.gallery_item a
-{
-	display: block;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-}
-
-/*********************************
-8. About
+6. About
 *********************************/
 
 .about
 {
 	background: #ffffff;
-	padding-top: 107px;
-	padding-bottom: 104px;
+	padding-top: 150px;
+	padding-bottom: 100px;
 }
 .about_text
 {
+	color: #690772;
 	margin-top: 29px;
 }
 .about_images
@@ -824,161 +746,44 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 /*********************************
-9. Testimonials
+7. Booking
 *********************************/
 
-.testimonials
-{
-	padding-top: 117px;
-	padding-bottom: 114px;
-}
-.testimonials_overlay
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(13,11,24,0.79);
-	pointer-events: none;
-}
-.test_slider_item
+.booking
 {
 	background: #ffffff;
-	padding-top: 43px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.booking_text
+{
+	margin-top: 10px;
+}
+.booking_slider_container
+{
+	margin-top: 50px;
+}
+.booking_item
+{
+	background: #ffffff;
 	padding-bottom: 58px;
 	padding-left: 45px;
 	padding-right: 45px;
 }
-.rating i::before
-{
-	font-family: 'FontAwesome';
-	content: "\f005";
-	font-style: normal;
-	font-size: 18px;
-	color: rgba(0,0,0,0.2);
+.booking_title
+{	
+	margin-bottom: 30px;
 }
-.rating i:not(:last-of-type)
-{
-	margin-right: 6px;
-}
-.rating_1 i:first-child::before{color: #ffb400;}
-.rating_2 i:first-child::before{color: #ffb400;}
-.rating_2 i:nth-child(2)::before{color: #ffb400;}
-.rating_3 i:first-child::before{color: #ffb400;}
-.rating_3 i:nth-child(2)::before{color: #ffb400;}
-.rating_3 i:nth-child(3)::before{color: #ffb400;}
-.rating_4 i:first-child::before{color: #ffb400;}
-.rating_4 i:nth-child(2)::before{color: #ffb400;}
-.rating_4 i:nth-child(3)::before{color: #ffb400;}
-.rating_4 i:nth-child(4)::before{color: #ffb400;}
-.rating_5 i:first-child::before{color: #ffb400;}
-.rating_5 i:nth-child(2)::before{color: #ffb400;}
-.rating_5 i:nth-child(3)::before{color: #ffb400;}
-.rating_5 i:nth-child(4)::before{color: #ffb400;}
-.rating_5 i:nth-child(5)::before{color: #ffb400;}
-.testimonial_title
-{
-	margin-top: 21px;
-}
-.testimonial_title a
+.booking_title a
 {
 	font-size: 24px;
 	font-weight: 600;
 	color: #393939;
 	line-height: 1.2;
 }
-.testimonial_title a:hover
+.booking_title a:hover
 {
-	color: #ffa37b;
-}
-.testimonial_text
-{
-	margin-top: 24px;
-}
-.testimonial_image
-{
-	width: 106px;
-	height: 106px;
-	border-radius: 50%;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 12px;
-}
-.testimonial_author
-{
-	margin-top: 26px;
-	font-size: 15px;
-	font-weight: 600;
-	color: #393939;
-}
-.testimonial_author a
-{
-	font-size: 15px;
-	font-weight: 600;
-	color: #393939;
-}
-.testimonial_author a:hover
-{
-	color: #ffa37b;
-}
-
-/*********************************
-10. Booking
-*********************************/
-
-.booking
-{
-	background: #ffffff;
-	padding-top: 107px;
-	padding-bottom: 114px;
-}
-.booking_text
-{
-	margin-top: 28px;
-}
-.booking_slider_container
-{
-	margin-top: 63px;
-}
-.booking_item
-{
-	height: 569px;
-}
-.booking_price
-{
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	width: 128px;
-	height: 36px;
-	background: #ffffff;
-	text-align: center;
-	line-height: 36px;
-	font-size: 16px;
-	font-weight: 600;
-	color: #393939;
-}
-.booking_link
-{
-	position: absolute;
-	bottom: 18px;
-	left: 15px;
-	width: calc(100% - 30px);
-	height: 65px;
-	background: #ffa37b;
-	text-align: center;
-}
-.booking_link a
-{
-	display: block;
-	width: 100%;
-	height: 100%;
-	line-height: 65px;
-	font-size: 18px;
-	font-weight: 600;
-	color: #ffffff;
+	color: #b47bff;
 }
 .booking_overlay
 {
@@ -997,71 +802,40 @@ input[type=number]::-webkit-outer-spin-button
 	visibility: visible;
 	opacity: 1;
 }
-
-/*********************************
-11. Blog
-*********************************/
-
-.blog
+.booking_text
 {
-
+	margin-top: 24px;
 }
-.blog_slider_container
+.booking_image
 {
 	width: 100%;
-	height: 487px;
-}
-.blog_slide
-{
 	height: 100%;
-	background: #0f0a27;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
 }
-.blog_slide .background_image
+.booking_author
 {
-	opacity: 0.33;
-}
-.blog_content
-{
-	position: absolute;
-	left: 52px;
-	bottom: 57px;
-	width: calc(100% - 52px);
-	padding-right: 30px;
-}
-.blog_date
-{
-	width: 116px;
-	height: 26px;
-	background: #ffa37b;
-	text-align: center;
-}
-.blog_date a
-{
-	display: block;
-	height: 100%;
-	font-size: 14px;
+	margin-top: 26px;
+	font-size: 15px;
 	font-weight: 600;
-	color: #ffffff;
-	line-height: 26px;
+	color: #393939;
 }
-.blog_title
+.booking_author a
 {
-	margin-top: 14px;
-}
-.blog_title a
-{
-	font-size: 36px;
+	font-size: 15px;
 	font-weight: 600;
-	color: #ffffff;
-	line-height: 1.2;
+	color: #393939;
 }
-.blog_title a:hover
+.bookingl_author a:hover
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 
+
 /*********************************
-12. Footer
+8. Footer
 *********************************/
 
 .footer
@@ -1185,7 +959,7 @@ input[type=number]::-webkit-outer-spin-button
 {
 	width: 152px;
 	height: 54px;
-	background: #ffa37b;
+	background: #b47bff;
 	margin-top: 23px;
 	border: none;
 	outline: none;
