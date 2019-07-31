@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- 생성 시간: 19-07-27 08:37
+-- 생성 시간: 19-07-31 09:31
 -- 서버 버전: 8.0.16
 -- PHP 버전: 7.3.7
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- 데이터베이스: `hmong`
 --
-CREATE DATABASE IF NOT EXISTS `hmong` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `hmong`;
 
 -- --------------------------------------------------------
 
@@ -51,8 +49,54 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`pk`, `state`, `name`, `email`, `phone`, `date`, `hour`, `min`, `a_p`, `program`, `guest`, `language`, `comment`) VALUES
-(1, 1, 'Hong Eunseok', 'egg6909@gmail.com', '010-3020-6909', '2019-07-27', '3', '20', 'AM', 2, 5, '한국어', '잘해주세요 ^^;'),
+(1, 0, 'Hong Eunseok', 'egg6909@gmail.com', '010-3020-6909', '2019-07-27', '3', '20', 'AM', 2, 5, '한국어', '잘해주세요 ^^;'),
 (2, 1, 'Hong Eunseok2', 'egg6909@gmail.com', '010-3020-6901', '2019-12-27', '3', '20', 'AM', 2, 5, '한국어', '잘해주세요 ^^;');
+
+-- --------------------------------------------------------
+
+--
+-- 테이블 구조 `contact`
+--
+
+CREATE TABLE `contact` (
+  `pk` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `org` text,
+  `about` mediumtext,
+  `facebook` text,
+  `instagram` text,
+  `image` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 테이블의 덤프 데이터 `contact`
+--
+
+INSERT INTO `contact` (`pk`, `name`, `org`, `about`, `facebook`, `instagram`, `image`) VALUES
+(4, 'Eunseok Hong', 'Samsung Electronic', 'I am I am I am..... ', 'eggfefef@naver.com', 'expert.hong@samsung.com', '1564584589');
+
+-- --------------------------------------------------------
+
+--
+-- 테이블 구조 `inbox`
+--
+
+CREATE TABLE `inbox` (
+  `pk` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `email` text NOT NULL,
+  `subject` mediumtext NOT NULL,
+  `message` longtext NOT NULL,
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 테이블의 덤프 데이터 `inbox`
+--
+
+INSERT INTO `inbox` (`pk`, `name`, `email`, `subject`, `message`) VALUES
+(1, 'Eunseok', 'egg6909@gmail.com', '서브젝 제목은 몰까요', '그냥 메시지 메시지 보내는거지 그런거야?'),
+(2, 'JeeJee', 'JeeJee@gmail.com', 'JeeJee JEE Jdd Jii', 'wefewfwefkew0i243jr9r2\r\n3fwejwejfsldjfas\r\n^&%^&gjeoirgjreiogjweiopfjewiofjweipfjewf.wef');
 
 -- --------------------------------------------------------
 
@@ -78,7 +122,8 @@ CREATE TABLE `program` (
 --
 
 INSERT INTO `program` (`pk`, `title`, `contents`, `detail`, `price`, `time`, `video`, `image`, `display`) VALUES
-(2, 'fgrgrgrg', 'trytr', 'fgnfgnrt', 'hrth', 'trhtr', 'hrth', NULL, 1);
+(12, 'weewfxzc', 'wefwefxcv', 'wefewxzcv', 'ewfwefxzcv', 'wefxcz', 'fewfzcxv', '', 1),
+(13, 'xcvxcv', 'sdvds', 'vsdvdsv', 'sdv', 'dsvds', 'vsdvsdvds', '', 1);
 
 --
 -- 덤프된 테이블의 인덱스
@@ -88,6 +133,18 @@ INSERT INTO `program` (`pk`, `title`, `contents`, `detail`, `price`, `time`, `vi
 -- 테이블의 인덱스 `book`
 --
 ALTER TABLE `book`
+  ADD PRIMARY KEY (`pk`);
+
+--
+-- 테이블의 인덱스 `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`pk`);
+
+--
+-- 테이블의 인덱스 `inbox`
+--
+ALTER TABLE `inbox`
   ADD PRIMARY KEY (`pk`);
 
 --
@@ -107,10 +164,22 @@ ALTER TABLE `book`
   MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- 테이블의 AUTO_INCREMENT `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- 테이블의 AUTO_INCREMENT `inbox`
+--
+ALTER TABLE `inbox`
+  MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- 테이블의 AUTO_INCREMENT `program`
 --
 ALTER TABLE `program`
-  MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
