@@ -5,7 +5,7 @@
         <div class="ml-auto d-flex flex-row align-items-center justify-content-start">
             <nav class="main_nav" id="main_nav_menu">
                 <ul class="d-flex flex-row align-items-start justify-content-start">
-                    <li><a href="index.php">Home</a></li>
+                    <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="about_hmong.php">About Hmong</a></li>
                     <li><a href="pattern.php">About Patterns</a></li>
                     <li><a href="blog.php">Blog</a></li>
@@ -50,6 +50,14 @@
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-    var CURRENT_URL = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
-    $('#main_nav_menu').find('a[href="' + CURRENT_URL + '"]').parent('li').addClass('active');
+    var CURRENT_URL = window.location.href.substring(window.location.href.lastIndexOf('/') + 1),
+        menu_navi = $('#main_nav_menu').find('a[href="' + CURRENT_URL + '"]').parent('li');
+
+    if (menu_navi.length > 0) {
+        $('#main_nav_menu').find('li').each(function (idx) {
+            $(this).removeClass('active');
+        })
+        menu_navi.addClass('active');
+    }
+
 </script>
