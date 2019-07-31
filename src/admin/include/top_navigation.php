@@ -15,10 +15,10 @@
                 <ul class="nav side-menu">
                     <li><a href="home.php"><i class="fa fa-home"></i> Home </span></a></li>
                     <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
-                    <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a></li>
+                    <li id="program_menu"><a href="program.php"><i class="fa fa-child"></i> Program </span></a></li>
                     <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
                     <li><a href="inbox.php"><i class="fa fa-envelope"></i> Inbox </span></a></li>
-                    <li><a href="contacts.php"><i class="fa fa-instagram"></i> Contacts </span></a></li>
+                    <li id="contacts_menu"><a href="contacts.php"><i class="fa fa-instagram"></i> Contacts </span></a></li>
                 </ul>
             </div>
         </div>

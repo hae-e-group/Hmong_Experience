@@ -64,57 +64,7 @@ if (isset($_GET['id'])) {
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-        <div class="col-md-3 left_col">
-            <div class="left_col scroll-view">
-                <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.php" class="site_title"><i class="fa fa-h-square"></i> <span>HaeTae</span></a>
-                </div>
-
-                <div class="clearfix"></div>
-                <br/>
-
-                <!-- sidebar menu -->
-                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                    <div class="menu_section">
-                        <h3>General</h3>
-                        <ul class="nav side-menu">
-                            <li><a href="home.php"><i class="fa fa-home"></i> Home </span></a></li>
-                            <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
-                            <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="program_form.php">Program edit</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
-                            <li><a href="inbox.php"><i class="fa fa-envelope"></i> Inbox </span></a></li>
-                            <li><a href="contacts.php"><i class="fa fa-instagram"></i> Contacts </span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /sidebar menu -->
-            </div>
-        </div>
-
-        <!-- top navigation -->
-        <div class="top_nav">
-            <div class="nav_menu">
-                <nav>
-                    <div class="nav toggle">
-                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                    </div>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                               aria-expanded="false">
-                                <i class="fa"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <!-- /top navigation -->
+        <?php include ("include/top_navigation.php"); ?>
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -131,7 +81,7 @@ if (isset($_GET['id'])) {
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Program infomation <small>edit program information</small></h2>
+                                <h2>Program infomation <small><?= $mode ?> program information</small></h2>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
@@ -308,6 +258,12 @@ if (isset($_GET['id'])) {
     function form_submit() {
         $('#demo-form2').submit();
     }
+
+    $(document).ready(function () {
+        $('#program_menu').append('<ul class="nav child_menu">' +
+            '<li><a href="program_form.php">Program <?= $mode ?></a></li>' +
+            '</ul>');
+    });
 </script>
 
 <!-- Custom Theme Scripts -->
