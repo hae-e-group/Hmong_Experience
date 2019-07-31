@@ -22,7 +22,7 @@ while ($row = mysqli_fetch_array($result)) {
     }
 
     $program_list = $program_list
-        . "<td><a href='program_edit.php?id={$row['pk']}' class='btn btn-info btn-xs'><i class='fa fa-pencil'></i> Edit </a>"
+        . "<td><a href='program_form.php?id={$row['pk']}' class='btn btn-info btn-xs'><i class='fa fa-pencil'></i> Edit </a>"
         . "<button type='button' data-id='{$row['pk']}' class='btn btn-danger btn-xs btn_delete_h'><i class='fa fa-trash-o'></i> Delete </button></td></tr>";
 
 }
@@ -78,7 +78,7 @@ while ($row = mysqli_fetch_array($result)) {
                             </div>
                             <div class="x_content">
 
-                                <a href="program_add.php" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Add
+                                <a href="program_form.php" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Add
                                 </a>
 
                                 <!-- start project list -->

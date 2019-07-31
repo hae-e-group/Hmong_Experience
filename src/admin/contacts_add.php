@@ -105,7 +105,7 @@
                             <div class="x_content">
                                 <br/>
                                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                                      action="create_contact.php" method="POST">
+                                      action="request/create_contact.php" method="POST">
 
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span
@@ -159,7 +159,7 @@
                                 <div class="form-group">
                                     <p class="control-label col-md-5 col-sm-5 col-xs-12 col-md-offset-2">Drag image
                                         file. Only single image supported.</p>
-                                    <form action="upload_image.php" enctype="multipart/form-data"
+                                    <form action="request/upload_image.php" enctype="multipart/form-data"
                                           class="col-md-7 col-xs-12 col-md-offset-2 dropzone" id="fileDropzone"></form>
                                 </div>
 
@@ -209,7 +209,7 @@
 
 <script type="text/javascript">
     var myDropzone = new Dropzone("#fileDropzone", {
-        url: "upload_image.php",
+        url: "request/upload_image.php",
         maxFiles: 1,
         acceptedFiles: 'image/*',
         error: function (file, response) {

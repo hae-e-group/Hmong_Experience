@@ -139,7 +139,7 @@ while ($row = mysqli_fetch_array($result)) {
         if (result) {
             $.ajax({
                 type: 'POST',
-                url: 'delete_contact.php',
+                url: 'request/delete_contact.php',
                 data: {id:$(this).data('id')},
                 dataType: 'json',
                 success: function(data, status, xhr) {

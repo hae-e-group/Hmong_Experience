@@ -4,8 +4,8 @@ $(document).ready(function() {
 		if (result) {
 			$.ajax({
 				type: 'POST',
-				url: 'delete_program.php',
-				data: {id:$(this).data('id')},
+				url: 'action/action_program.php',
+				data: {id:$(this).data('id'), mode:'delete'},
 				dataType: 'json',
 				success: function(data, status, xhr) {
 					console.log(data);
@@ -25,8 +25,8 @@ $(document).ready(function() {
 	    var thiz = $(this);
 		$.ajax({
 				type: 'POST',
-				url: 'change_display_program.php',
-				data: {id:$(this).data('id'), display: $(this).hasClass('btn-success') ? 0 : 1},
+				url: 'action/action_program.php',
+				data: {id:$(this).data('id'), display: $(this).hasClass('btn-success') ? 0 : 1, mode:'update_display'},
 				dataType: 'json',
 				success: function(data, status, xhr) {
 					if (data.display == 1) {

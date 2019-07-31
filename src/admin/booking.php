@@ -318,7 +318,7 @@ while ($row = mysqli_fetch_array($result)) {
         console.log(json);
         $.ajax({
             type: "POST",
-            url: "accept_booking.php",
+            url: "request/accept_booking.php",
             data: json,
             dataType: "json",
             success: function (data, status, xhr) {

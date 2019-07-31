@@ -15,6 +15,7 @@ $program = array(
     'video' => '',
     'image' => '');
 
+$mode = 'create';
 
 if (isset($_GET['id'])) {
     $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
@@ -28,6 +29,7 @@ if (isset($_GET['id'])) {
     $program['time'] = $row['time'];
     $program['video'] = $row['video'];
     $program['image'] = $row['image'];
+    $mode = 'update';
 }
 
 ?>
@@ -135,7 +137,7 @@ if (isset($_GET['id'])) {
                             <div class="x_content">
                                 <br/>
                                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                                      action="update_program.php" method="POST">
+                                      action="action/action_program.php" method="POST">
 
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Title <span
@@ -195,12 +197,12 @@ if (isset($_GET['id'])) {
                                     <div class="form-group">
                                         <label for="thumb"
                                                class="control-label col-md-3 col-sm-3 col-xs-12">Image</label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-md-6 col-sm-6 col-xs-12" id="image_div">
                                             <?php
                                             if ($program['image'] == '') {
                                                 echo "<p class='form-control col-md-7 col-xs-12'>None</p>";
                                             } else {
-                                                echo "<img src='uploads/{$program['image']}' class='col-md-7 col-xs-12' />";
+                                                echo "<img src='../uploads/{$program['image']}' class='col-md-7 col-xs-12' />";
                                             }
                                             ?>
                                         </div>
@@ -208,12 +210,13 @@ if (isset($_GET['id'])) {
 
                                     <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
                                     <input type="hidden" name="image" id="image" value="<?= $program['image'] ?>"/>
+                                    <input type="hidden" name="mode" value="<?= $mode ?>" />
                                 </form>
 
                                 <div class="form-group">
                                     <p class="control-label col-md-3 col-sm-3 col-xs-12 col-md-offset-2">Drag image
                                         file. Only single image supported.</p>
-                                    <form action="upload_image.php" enctype="multipart/form-data"
+                                    <form action="request/upload_image.php" enctype="multipart/form-data"
                                           class="col-md-7 col-xs-12 col-md-offset-2 dropzone" id="fileDropzone"></form>
                                 </div>
 
@@ -223,9 +226,14 @@ if (isset($_GET['id'])) {
                                         <button class="btn btn-primary" type="button"
                                                 onclick="location.href='program.php'">Cancel
                                         </button>
-                                        <button type="submit" class="btn btn-success">Update</button>
-                                        <button type="button" class="btn btn-danger" id="delete_image">Delete Image
-                                        </button>
+                                        <?php
+                                        if (isset($_GET['id'])) {
+                                            echo '<button type="submit" class="btn btn-success">Update</button>';
+                                            echo '<button type="button" class="btn btn-danger" id="delete_image">Delete Image</button>';
+                                        } else {
+                                            echo '<button type="button" class="btn btn-success">Submit</button>';
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +270,7 @@ if (isset($_GET['id'])) {
 
 <script type="text/javascript">
     var myDropzone = new Dropzone("#fileDropzone", {
-        url: "upload_image.php",
+        url: "action/upload_image.php",
         maxFiles: 1,
         acceptedFiles: 'image/*',
         error: function (file, response) {
@@ -271,6 +279,9 @@ if (isset($_GET['id'])) {
         success: function (file, response) {
             console.log(response);
             $('#image').val(response);
+
+            $('#image_div').empty();
+            $('#image_div').append("<img src='../uploads/" + response + "' class='col-md-7 col-xs-12' />")
         },
         complete: function (file) {
             console.log("Complete");
