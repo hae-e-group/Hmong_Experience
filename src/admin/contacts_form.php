@@ -14,6 +14,7 @@ $contact = array(
     'instagram' => '',
     'image' => '');
 
+$mode = 'create';
 
 if (isset($_GET['id'])) {
     $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
@@ -26,6 +27,7 @@ if (isset($_GET['id'])) {
     $contact['facebook'] = $row['facebook'];
     $contact['instagram'] = $row['instagram'];
     $contact['image'] = $row['image'];
+    $mode = 'update';
 }
 
 ?>
@@ -78,14 +80,14 @@ if (isset($_GET['id'])) {
                             <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
                             <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="program_add.php">Program add</a></li>
+                                    <li><a href="program_form.php">Program add</a></li>
                                 </ul>
                             </li>
                             <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
                             <li><a href="inbox.php"><i class="fa fa-envelope"></i> Inbox </span></a></li>
                             <li><a href="contacts.php"><i class="fa fa-instagram"></i> Contacts </span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="contacts_edit.php">Contacts edit</a></li>
+                                    <li><a href="contacts_form.php">Contacts edit</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -137,7 +139,7 @@ if (isset($_GET['id'])) {
                             <div class="x_content">
                                 <br/>
                                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                                      action="request/update_contact.php" method="POST">
+                                      action="action/action_contact.php" method="POST">
 
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span
@@ -187,7 +189,7 @@ if (isset($_GET['id'])) {
                                     <div class="form-group">
                                         <label for="thumb"
                                                class="control-label col-md-3 col-sm-3 col-xs-12">Image</label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-md-6 col-sm-6 col-xs-12" id="image_div">
                                             <?php
                                             if ($contact['image'] == '') {
                                                 echo "<p class='form-control col-md-7 col-xs-12'>None</p>";
@@ -198,6 +200,7 @@ if (isset($_GET['id'])) {
                                         </div>
                                     </div>
 
+                                    <input type="hidden" name="mode", value="<?= $mode ?>">
                                     <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
                                     <input type="hidden" name="image" id="image" value="<?= $contact['image'] ?>" />
 
@@ -216,9 +219,14 @@ if (isset($_GET['id'])) {
                                         <button class="btn btn-primary" type="button"
                                                 onclick="location.href='contacts.php'">Cancel
                                         </button>
-                                        <button type="submit" class="btn btn-success">Update</button>
-                                        <button type="button" class="btn btn-danger" id="delete_image">Delete Image
-                                        </button>
+                                        <?php
+                                        if (isset($_GET['id'])) {
+                                            echo '<button type="submit" class="btn btn-success">Update</button>';
+                                            echo '<button type="button" class="btn btn-danger" id="delete_image">Delete Image</button>';
+                                        } else {
+                                            echo '<button type="button" class="btn btn-success">Submit</button>';
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +266,7 @@ if (isset($_GET['id'])) {
 
 <script type="text/javascript">
     var myDropzone = new Dropzone("#fileDropzone", {
-        url: "request/upload_image.php",
+        url: "action/upload_image.php",
         maxFiles: 1,
         acceptedFiles: 'image/*',
         error: function (file, response) {
@@ -267,6 +275,9 @@ if (isset($_GET['id'])) {
         success: function (file, response) {
             console.log(response);
             $('#image').val(response);
+
+            $('#image_div').empty();
+            $('#image_div').append("<img src='../uploads/" + response + "' class='col-md-7 col-xs-12' />");
         },
         complete: function (file) {
             console.log("Complete");

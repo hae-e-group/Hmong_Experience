@@ -24,7 +24,7 @@ while ($row = mysqli_fetch_array($result)) {
                         </ul>
                     </div>
                     <div class='right col-xs-5 text-center'>
-                        <img src='uploads/{$row['image']}' alt='' class='img-circle img-responsive'>
+                        <img src='../uploads/{$row['image']}' alt='' class='img-circle img-responsive'>
                     </div>
                 </div>
                 <div class='col-xs-12 bottom text-center'>
@@ -93,7 +93,7 @@ while ($row = mysqli_fetch_array($result)) {
                             <div class="x_content">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <a href="contacts_add.php" class="btn btn-primary btn-xs"><i class="fa fa-plus"> </i> Add contact</a>
+                                        <a href="contacts_form.php" class="btn btn-primary btn-xs"><i class="fa fa-plus"> </i> Add contact</a>
                                     </div>
 
                                     <div class="clearfix"></div>
@@ -139,8 +139,8 @@ while ($row = mysqli_fetch_array($result)) {
         if (result) {
             $.ajax({
                 type: 'POST',
-                url: 'request/delete_contact.php',
-                data: {id:$(this).data('id')},
+                url: 'action/action_contact.php',
+                data: {id:$(this).data('id'), mode:'delete'},
                 dataType: 'json',
                 success: function(data, status, xhr) {
                     console.log(data);

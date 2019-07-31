@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
                             <li><a href="calendar2.php"><i class="fa fa-calendar"></i> Calendar </span></a></li>
                             <li><a href="program.php"><i class="fa fa-child"></i> Program </span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="program_edit.php">Program edit</a></li>
+                                    <li><a href="program_form.php">Program edit</a></li>
                                 </ul>
                             </li>
                             <li><a href="booking.php"><i class="fa fa-check"></i> Booking </span></a></li>
@@ -281,7 +281,7 @@ if (isset($_GET['id'])) {
             $('#image').val(response);
 
             $('#image_div').empty();
-            $('#image_div').append("<img src='../uploads/" + response + "' class='col-md-7 col-xs-12' />")
+            $('#image_div').append("<img src='../uploads/" + response + "' class='col-md-7 col-xs-12' />");
         },
         complete: function (file) {
             console.log("Complete");

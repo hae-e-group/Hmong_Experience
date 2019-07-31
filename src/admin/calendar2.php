@@ -162,7 +162,7 @@
     $(document).ready(function () {
         $.ajax({
             type: "POST",
-            url: "request/load_booking.php",
+            url: "action/action_calendar.php",
             dataType: "json",
             success: function (data, status, xhr) {
                 console.log(data);
