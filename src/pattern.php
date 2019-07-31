@@ -39,14 +39,14 @@
 					<div class="about_title">The Hmong Patterns</div>
 					<!-- Hmong Pattern List -->
 					<select class="image-picker show-html" data-limit="2" multiple="multiple">
-						<option data-img-src="images/patterns/snail.jpg" value="snail">snail</option>
-						<option data-img-src="images/patterns/elephant_foot.jpg" value="elephant_foot">elephant_foot</option>
-						<option data-img-src="images/patterns/house.jpg" value="house">house</option>
+						<option data-img-src="images/patterns/snail.JPG" value="snail">snail</option>
+						<option data-img-src="images/patterns/elephant_foot.JPG" value="elephant_foot">elephant_foot</option>
+						<option data-img-src="images/patterns/house.JPG" value="house">house</option>
 						<option data-img-src="images/patterns/mountain.jpg" value="mountain">mountain</option>
-						<option data-img-src="images/patterns/quarter.jpg" value="quarter">quarter</option>
-						<option data-img-src="images/patterns/snail_chev.jpg" value="snail_chev">snail_chev</option>
-						<option data-img-src="images/patterns/step.jpg" value="step">step</option>
-						<option data-img-src="images/patterns/x.jpg" value="x">x</option>
+						<option data-img-src="images/patterns/quarter.JPG" value="quarter">quarter</option>
+						<option data-img-src="images/patterns/snail_chev.JPG" value="snail_chev">snail_chev</option>
+						<option data-img-src="images/patterns/step.JPG" value="step">step</option>
+						<option data-img-src="images/patterns/x.JPG" value="x">x</option>
 					</select>
 				</div>
 				<div class="col-lg-6">
@@ -142,10 +142,6 @@
 	jQuery("select.image-picker").imagepicker({
 		hide_select: true,
 	});
-
-
-
-    //.find('a[href="pattern.php"]')
 </script>
 </body>
 </html>

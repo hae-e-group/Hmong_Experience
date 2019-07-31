@@ -56,8 +56,11 @@
     if (menu_navi.length > 0) {
         $('#main_nav_menu').find('li').each(function (idx) {
             $(this).removeClass('active');
-        })
+        });
         menu_navi.addClass('active');
+    } else if (CURRENT_URL === 'booking.php') {
+        $('#main_nav_menu').find('li').each(function (idx) {
+            $(this).removeClass('active');
+        });
     }
-
 </script>
