@@ -14,6 +14,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       both_array_are_equal,
       sanitized_options,
       indexOf = [].indexOf;
+  
+  var selected_list = []
+  var manage_selected_list = function(id) {
+    var index = selected_list.indexOf(id)
+    if (index != -1) {
+      selected_list.splice(index, 1)
+    } else {
+      if (selected_list.length >= 2) return
+      selected_list[selected_list.length] = id
+    }
+    selected_list.sort()
+  }
+  var get_selected_list_id = function() {
+    var id = ""
+    for (var i = 0; i < selected_list.length; i++) {
+      id += selected_list[i]
+      if (i != selected_list.length - 1) id += "-"
+    }
+    return id
+  }
 
   jQuery.fn.extend({
     imagepicker: function imagepicker() {
@@ -305,7 +325,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         jQuery('select.image-picker>option').each(function(){
           jQuery('#'+this.value).css("display", "none")
         })
-        jQuery('#' + this.value()).css("display", "")
+        if (selected_list.length == 2) {
+          jQuery('#' + get_selected_list_id()).css("display", "none")
+        }
+        manage_selected_list(this.value())
+        if (selected_list.length > 0) {
+          jQuery('#' + get_selected_list_id()).css("display", "")
+        }
         if (this.opts.clicked != null) {
           this.opts.clicked.call(this.picker.select, this, event);
         }
