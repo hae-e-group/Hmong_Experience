@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
 	<link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/common.css">
 	<link rel="stylesheet" type="text/css" href="styles/about_hmong.css">
 	<link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/image-picker.css">
