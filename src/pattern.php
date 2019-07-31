@@ -141,6 +141,10 @@
 	jQuery("select.image-picker").imagepicker({
 		hide_select: true,
 	});
+
+
+
+    //.find('a[href="pattern.php"]')
 </script>
 </body>
 </html>

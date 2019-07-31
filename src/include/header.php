@@ -1,11 +1,11 @@
 <!-- Header -->
 <header class="header">
     <div class="header_content d-flex flex-row align-items-center justify-content-start">
-        <div class="logo"><a href="#">HaeTae</a></div>
+        <div class="logo"><a href="index.php">HaeTae</a></div>
         <div class="ml-auto d-flex flex-row align-items-center justify-content-start">
-            <nav class="main_nav">
+            <nav class="main_nav" id="main_nav_menu">
                 <ul class="d-flex flex-row align-items-start justify-content-start">
-                    <li class="active"><a href="index.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="about_hmong.php">About Hmong</a></li>
                     <li><a href="pattern.php">About Patterns</a></li>
                     <li><a href="blog.php">Blog</a></li>
@@ -47,3 +47,9 @@
         </div>
     </div>
 </div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    var CURRENT_URL = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+    $('#main_nav_menu').find('a[href="' + CURRENT_URL + '"]').parent('li').addClass('active');
+</script>
