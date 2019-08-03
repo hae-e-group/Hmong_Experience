@@ -47,7 +47,7 @@ while ($row = mysqli_fetch_array($result)) {
     <!-- Home -->
 
     <div class="home">
-        <div class="background_image" style="background-image:url(images/booking.jpg)"></div>
+        <div class="background_image" style="background-image:url(images/hmong_background.jpg)"></div>
         <div class="home_container">
             <div class="container">
                 <div class="row">

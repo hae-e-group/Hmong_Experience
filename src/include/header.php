@@ -54,12 +54,9 @@
 
     if(CURRENT_URL.indexOf('?') != -1) {
         CURRENT_URL = CURRENT_URL.split("?")[0];
-        console.log("find!! : "  + CURRENT_URL);
     }
 
     var menu_navi = $('#main_nav_menu').find('a[href="' + CURRENT_URL + '"]').parent('li');
-
-
 
     if (menu_navi.length > 0) {
         $('#main_nav_menu').find('li').each(function (idx) {

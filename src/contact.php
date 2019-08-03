@@ -25,14 +25,14 @@
     <!-- Home -->
 
     <div class="home">
-        <div class="background_image" style="background-image:url(images/contact.jpg)"></div>
+        <div class="background_image" style="background-image:url(images/hmong_background.jpg)"></div>
         <div class="home_container">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="home_content text-center">
                             <div class="home_title">Contact</div>
-                            <div class="booking_form_container">
+                            <!--div class="booking_form_container">
                                 <form action="#" class="booking_form" id="booking_form">
                                     <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
                                         <div class="booking_input_container d-flex flex-row align-items-start justify-content-start flex-wrap">
@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                 </div>
