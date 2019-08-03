@@ -17,6 +17,12 @@ while ($row = mysqli_fetch_array($result)) {
         $master_day_list = $master_day_list."<li><a href='blog.php?id={$row['pk']}'>{$row['title']}</a></li>";
     }
 }
+
+$result = mysqli_query($conn, "select experience from program where pk = 21");
+while ($row = mysqli_fetch_array($result)) {
+    $description = $row['experience'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -63,9 +69,6 @@ while ($row = mysqli_fetch_array($result)) {
     </div>
 
     <!-- Blog -->
-
-
-
     <div class="blog">
         <div class="container">
             <div class="row">
@@ -117,23 +120,7 @@ while ($row = mysqli_fetch_array($result)) {
                                     </ul>
                                 </div>-->
                                 <div class="blog_post_text">
-                                    <p><strong>1. Overview</strong></p>
-                                    <p>Traditional weaving skill of Hmong is already well-known worldwide. In this course, you’ll have a professional weaving skill and also be prepared to start your own craft shop.</p>
-                                    <br>
-                                    <p><strong>2. What you’ll experience</strong></p>
-                                    <p>On this Professional Weaving course, you will:<br>
-                                    <li>Get experience with Hmong traditional craft tools</li>
-                                    <li>Learn how to use craft tools</li>
-                                    <li>Develop your weaving skill with weaving experts</li>
-                                    <li>Understand the meaning of various hmong patterns</li>
-                                    <li>Be able to create your own pattern</li>
-                                    <li>Study business skills including how to manage a craft shop for tourists.</li></p>
-                                    <br>
-                                    <p><strong>3. Course Curriculum</strong></p>
-                                    <br>
-                                    <div class="blog_post_image col-12">                                    
-                                        <img src="images/curriculum.png" alt="">
-                                    </div>
+                                    <?= $description ?>
                                 </div>
                             </div>
                         </div>

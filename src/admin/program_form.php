@@ -58,6 +58,8 @@ if (isset($_GET['id'])) {
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- Dropzone.css -->
     <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <!-- summer note -->
+    <link href="../vendors/summernote/summernote.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -112,15 +114,6 @@ if (isset($_GET['id'])) {
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="detail"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Detail</label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="detail" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="detail" value="<?= $program['detail'] ?>">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
                                         <label for="price"
                                                class="control-label col-md-3 col-sm-3 col-xs-12">Price</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -155,6 +148,14 @@ if (isset($_GET['id'])) {
                                                 <option value="1">One day class</option>
                                                 <option value="2">Master class</option>
                                             </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-xs-12">
+                                        <label for="summernote"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Detail</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea id="summernote" name="detail"><?= $program['detail'] ?></textarea>
                                         </div>
                                     </div>
 
@@ -231,6 +232,8 @@ if (isset($_GET['id'])) {
 <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- Dropzone.js -->
 <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
+<!-- summer note -->
+<script src="../vendors/summernote/summernote.js"></script>
 
 <script type="text/javascript">
     var myDropzone = new Dropzone("#fileDropzone", {
@@ -279,6 +282,10 @@ if (isset($_GET['id'])) {
             '</ul>');
 
         $('#class').val(<?= $program['class'] ?>);
+
+        $('#summernote').summernote({
+            height: 300,
+        });
     });
 </script>
 
