@@ -1,7 +1,7 @@
 <!-- Header -->
 <header class="header">
     <div class="header_content d-flex flex-row align-items-center justify-content-start">
-        <div class="logo"><a href="index.php">HaeTae</a></div>
+        <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
         <div class="ml-auto d-flex flex-row align-items-center justify-content-start">
             <nav class="main_nav" id="main_nav_menu">
                 <ul class="d-flex flex-row align-items-start justify-content-start">

@@ -322,20 +322,15 @@ section
 {
 	height: 90px;
 }
+
 .logo
 {
 	width: 130px;
-	height: 41px;
-	border: solid 2px #b47bff;
-	text-align: center;
+	height: 63px;
 }
 .logo a
 {
-	display: block;
-	font-size: 24px;
-	font-weight: 600;
-	color: #b47bff;
-	line-height: 37px;
+
 }
 .main_nav ul li:not(:last-of-type)
 {
