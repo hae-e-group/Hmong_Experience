@@ -8,7 +8,7 @@
                     <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="people.php">About Hmong</a></li>
                     <li><a href="pattern.php">About Patterns</a></li>
-                    <li><a href="blog.php">Classes</a></li>
+                    <li id = 'menu_blog'><a href="blog.php?id=24">Classes</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
@@ -34,7 +34,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="people.php">About Hmong</a></li>
                 <li><a href="pattern.php">About Patterns</a></li>
-                <li><a href="blog.php">Blog</a></li>
+                <li><a href="blog.php?id=24">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
@@ -67,5 +67,11 @@
         $('#main_nav_menu').find('li').each(function (idx) {
             $(this).removeClass('active');
         });
+    } else if (CURRENT_URL === 'blog.php') {
+        $('#main_nav_menu').find('li').each(function (idx) {
+            $(this).removeClass('active');
+        });
+
+        $('#menu_blog').addClass('active')
     }
 </script>

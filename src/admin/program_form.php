@@ -8,12 +8,11 @@ $conn = mysqli_connect(
 
 $program = array(
     'title' => '',
-    'contents' => '',
     'detail' => '',
-    'price' => '',
-    'time' => '',
-    'video' => '',
     'image' => '',
+    'duration' => '',
+    'cost' => '',
+    'start_date' => '',
     'class' => 0);
 
 $mode = 'create';
@@ -24,12 +23,11 @@ if (isset($_GET['id'])) {
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
     $program['title'] = $row['title'];
-    $program['contents'] = $row['contents'];
     $program['detail'] = $row['detail'];
-    $program['price'] = $row['price'];
-    $program['time'] = $row['time'];
-    $program['video'] = $row['video'];
     $program['image'] = $row['image'];
+    $program['duration'] = $row['duration'];
+    $program['cost'] = $row['cost'];
+    $program['start_date'] = $row['start_date'];
     $program['class'] = $row['class'];
     $mode = 'update';
 }
@@ -99,43 +97,33 @@ if (isset($_GET['id'])) {
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input type="text" id="title" required="required"
-                                                   class="form-control col-md-7 col-xs-12" , name="title"
-                                                   value="<?= $program['title'] ?>">
+                                                   class="form-control col-md-7 col-xs-12" name="title" value="<?= $program['title'] ?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="contents"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Contents</label>
+                                        <label for="duration"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Duration</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="contents" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="contents" value="<?= $program['contents'] ?>">
+                                            <input id="duration" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="duration" value="<?= $program['duration'] ?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="price"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Price</label>
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Cost</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="price" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="price" value="<?= $program['price'] ?>">
+                                            <input id="cost" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="cost" value="<?= $program['cost'] ?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="time" class="control-label col-md-3 col-sm-3 col-xs-12">Time</label>
+                                        <label for="start_date" class="control-label col-md-3 col-sm-3 col-xs-12">Start Date</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="time" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="time" value="<?= $program['time'] ?>">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="video"
-                                               class="control-label col-md-3 col-sm-3 col-xs-12">Video</label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="video" class="form-control col-md-7 col-xs-12" type="text"
-                                                   name="video" value="<?= $program['video'] ?>">
+                                            <input id="start_date" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="start_date" value="<?= $program['start_date'] ?>">
                                         </div>
                                     </div>
 
@@ -152,10 +140,10 @@ if (isset($_GET['id'])) {
                                     </div>
 
                                     <div class="form-group col-xs-12">
-                                        <label for="summernote"
+                                        <label for="detail"
                                                class="control-label col-md-3 col-sm-3 col-xs-12">Detail</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="summernote" name="detail"><?= $program['detail'] ?></textarea>
+                                            <textarea id="detail" name="detail"><?= $program['detail'] ?></textarea>
                                         </div>
                                     </div>
 
@@ -283,7 +271,7 @@ if (isset($_GET['id'])) {
 
         $('#class').val(<?= $program['class'] ?>);
 
-        $('#summernote').summernote({
+        $('#detail').summernote({
             height: 300,
         });
     });

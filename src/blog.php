@@ -18,11 +18,8 @@ while ($row = mysqli_fetch_array($result)) {
     }
 }
 
-$result = mysqli_query($conn, "select experience from program where pk = 21");
-while ($row = mysqli_fetch_array($result)) {
-    $description = $row['experience'];
-}
-
+$result = mysqli_query($conn, "select * from program where pk = {$_GET['id']}");
+$row = mysqli_fetch_array($result);
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +74,7 @@ while ($row = mysqli_fetch_array($result)) {
                     <div class="blog_posts">
                         <!-- Blog Post -->
                         <div class="blog_post">
-                        <div class="blog_post_title"><a href="#">Professional Weaving Class</a></div>
+                        <div class="blog_post_title"><a href="#"><?= $row['title'] ?></a></div>
                         <br><br>
                             <div class="row">                             
                                 <div class="blog_post_image col-5">
@@ -86,53 +83,19 @@ while ($row = mysqli_fetch_array($result)) {
                                 </div>
                                 <div class="details_list col-7">
                                     <ul>
-                                        <li>DURATION: Total 6 months / 2 hours per week</li>
-                                        <li>COURSE COSTS: To be confirmed</li>
-                                        <li>START DATE: To be confirmed</li>
+                                        <li><?= $row['duration'] ?></li>
+                                        <li><?= $row['cost'] ?></li>
+                                        <li><?= $row['start_date'] ?></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="blog_post_content">
-                                <!--
-                                <div class="blog_post_info">
-                                    <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_4.png" alt="">
-                                            <a class="youtube" href="https://www.youtube.com/embed/v64KOxKVLVg">Video</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_5.png" alt="">
-                                            <a href="#">21 Likes</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_6.png" alt="">
-                                            <a href="#">602 views</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_7.png" alt="">
-                                            <a href="#">1 min</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_8.png" alt="">
-                                            <a href="#">3 comments</a>
-                                        </li>
-                                    </ul>
-                                </div>-->
                                 <div class="blog_post_text">
-                                    <?= $description ?>
+                                    <?= $row['detail'] ?>
                                 </div>
                             </div>
                         </div>
-                        <!-- Page Nav -->
-                        <div class="page_nav">
-                            <ul class="d-flex flex-row align-items-start justify-content-start">
-                                <li class="active"><a href="#">01.</a></li>
-                                <li><a href="#">02.</a></li>
-                                <li><a href="#">03.</a></li>
-                            </ul>
-                        </div>
-
                     </div>
                 </div>
 
