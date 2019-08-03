@@ -8,7 +8,7 @@
                     <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="about_hmong.php">About Hmong</a></li>
                     <li><a href="pattern.php">About Patterns</a></li>
-                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="blog.php">Classes</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Blog</title>
+    <title>Classes</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="The River template project">
@@ -32,28 +32,8 @@
                 <div class="row">
                     <div class="col">
                         <div class="home_content text-center">
-                            <div class="home_title">Blog</div>
-                            <div class="booking_form_container">
-                                <form action="#" class="booking_form" id="booking_form">
-                                    <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
-                                        <div class="booking_input_container d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                            <div><input type="text"
-                                                        class="datepicker booking_input booking_input_a booking_in"
-                                                        placeholder="Check in" required="required"></div>
-                                            <div><input type="text"
-                                                        class="datepicker booking_input booking_input_a booking_out"
-                                                        placeholder="Check out" required="required"></div>
-                                            <div><input type="number" class="booking_input booking_input_b"
-                                                        placeholder="Children" required="required"></div>
-                                            <div><input type="number" class="booking_input booking_input_b"
-                                                        placeholder="Room" required="required"></div>
-                                        </div>
-                                        <div>
-                                            <button class="booking_button trans_200">Book Now</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            <div class="home_title">Classes</div>
+                            
                         </div>
                     </div>
                 </div>
@@ -73,27 +53,24 @@
                     <div class="blog_posts">
                         <!-- Blog Post -->
                         <div class="blog_post">
-                            <div class="row">
-                                <div class="blog_post_image col-6">
+                        <div class="blog_post_title"><a href="#">Professional Weaving Class</a></div>
+                        <br><br>
+                            <div class="row">                             
+                                <div class="blog_post_image col-5">
                                     <img src="images/magnet_300x300.jpg" alt="">
                                     <!--div class="blog_post_date"><a href="#">Oct 20, 2018</a></div-->
                                 </div>
-                                <div class="details_list col-6">
+                                <div class="details_list col-7">
                                     <ul>
-                                        <li>27 m² Patio</li>
-                                        <li>Balcony with view</li>
-                                        <li>Garden / Mountain view</li>
-                                        <li>Flat-screen TV</li>
-                                        <li>Air conditioning</li>
-                                        <li>Soundproofing</li>
-                                        <li>Private bathroom</li>
-                                        <li>Free WiFi</li>
+                                        <li>DURATION: Total 6 months / 2 hours per week</li>
+                                        <li>COURSE COSTS: To be confirmed</li>
+                                        <li>START DATE: To be confirmed</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="blog_post_content">
-                                <div class="blog_post_title"><a href="#">Make a Magnet</a></div>
+                                <!--
                                 <div class="blog_post_info">
                                     <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
                                         <li class="d-flex flex-row align-items-center justify-content-start">
@@ -117,102 +94,28 @@
                                             <a href="#">3 comments</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div>-->
                                 <div class="blog_post_text">
-                                    <p>Vivamus auctor mi eget odio feugiat, quis aliquet velit ornare. Integer egestas
-                                        sit amet neque sed elementum. Fusce ut turpis felis. Etiam pretium pharetra
-                                        augue, ac porttitor dolor consequat eget. Cras tempor suscipit enim vehicula
-                                        ultrices. Mauris sed orci blandit.</p>
-
+                                    <p><strong>1. Overview</strong></p>
+                                    <p>Traditional weaving skill of Hmong is already well-known worldwide. In this course, you’ll have a professional weaving skill and also be prepared to start your own craft shop.</p>
+                                    <br>
+                                    <p><strong>2. What you’ll experience</strong></p>
+                                    <p>On this Professional Weaving course, you will:<br>
+                                    <li>Get experience with Hmong traditional craft tools</li>
+                                    <li>Learn how to use craft tools</li>
+                                    <li>Develop your weaving skill with weaving experts</li>
+                                    <li>Understand the meaning of various hmong patterns</li>
+                                    <li>Be able to create your own pattern</li>
+                                    <li>Study business skills including how to manage a craft shop for tourists.</li></p>
+                                    <br>
+                                    <p><strong>3. Course Curriculum</strong></p>
+                                    <br>
+                                    <div class="blog_post_image col-12">                                    
+                                        <img src="images/curriculum.png" alt="">
+                                    </div>
                                 </div>
-                                <div class="button blog_post_button"><a href="#">Read More</a></div>
                             </div>
                         </div>
-
-                        <!-- Blog Post -->
-                        <div class="blog_post">
-                            <div class="blog_post_image">
-                                <img src="images/blog_2.jpg" alt="">
-                                <div class="blog_post_date"><a href="#">Oct 20, 2018</a></div>
-                            </div>
-                            <div class="blog_post_content">
-                                <div class="blog_post_title"><a href="#">How to book your stay</a></div>
-                                <div class="blog_post_info">
-                                    <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_4.png" alt="">
-                                            <a href="#">News</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_5.png" alt="">
-                                            <a href="#">21 Likes</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_6.png" alt="">
-                                            <a href="#">602 views</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_7.png" alt="">
-                                            <a href="#">1 min</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_8.png" alt="">
-                                            <a href="#">3 comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="blog_post_text">
-                                    <p>Vivamus auctor mi eget odio feugiat, quis aliquet velit ornare. Integer egestas
-                                        sit amet neque sed elementum. Fusce ut turpis felis. Etiam pretium pharetra
-                                        augue, ac porttitor dolor consequat eget. Cras tempor suscipit enim vehicula
-                                        ultrices. Mauris sed orci blandit.</p>
-                                </div>
-                                <div class="button blog_post_button"><a href="#">Read More</a></div>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post -->
-                        <div class="blog_post">
-                            <div class="blog_post_image">
-                                <img src="images/blog_3.jpg" alt="">
-                                <div class="blog_post_date"><a href="#">Oct 20, 2018</a></div>
-                            </div>
-                            <div class="blog_post_content">
-                                <div class="blog_post_title"><a href="#">Perfect beach wedding</a></div>
-                                <div class="blog_post_info">
-                                    <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_4.png" alt="">
-                                            <a href="#">News</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_5.png" alt="">
-                                            <a href="#">21 Likes</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_6.png" alt="">
-                                            <a href="#">602 views</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_7.png" alt="">
-                                            <a href="#">1 min</a>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <img src="images/icon_8.png" alt="">
-                                            <a href="#">3 comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="blog_post_text">
-                                    <p>Vivamus auctor mi eget odio feugiat, quis aliquet velit ornare. Integer egestas
-                                        sit amet neque sed elementum. Fusce ut turpis felis. Etiam pretium pharetra
-                                        augue, ac porttitor dolor consequat eget. Cras tempor suscipit enim vehicula
-                                        ultrices. Mauris sed orci blandit.</p>
-                                </div>
-                                <div class="button blog_post_button"><a href="#">Read More</a></div>
-                            </div>
-                        </div>
-
                         <!-- Page Nav -->
                         <div class="page_nav">
                             <ul class="d-flex flex-row align-items-start justify-content-start">
@@ -244,12 +147,12 @@
 
                         <!-- Categories -->
                         <div class="categories">
-                            <div class="sidebar_title"><h4>Master Class</h4></div>
+                            <div class="sidebar_title"><h4>Advanced Master Class</h4></div>
                             <div class="sidebar_list">
                                 <ul>
-                                    <li><a href="#">Make a Magnet</a></li>
-                                    <li><a href="#">Make a Bracelet</a></li>
-                                    <li><a href="#">Make a Postcard</a></li>
+                                    <li><a href="#">Professional Weaving Class</a></li>
+                                    <li><a href="#">Professional Dying Class</a></li>
+                                    <li><a href="#">Create your own pattern</a></li>
                                 </ul>
                             </div>
                         </div>
