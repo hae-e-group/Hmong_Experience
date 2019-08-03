@@ -1,3 +1,24 @@
+<?php
+$conn = mysqli_connect(
+    'localhost',
+    'root',
+    'q1w2e3r4',
+    'hmong');
+
+$sql = "SELECT * FROM program WHERE class > 0";
+$result = mysqli_query($conn, $sql);
+
+$one_day_list = '';
+$master_day_list = '';
+while ($row = mysqli_fetch_array($result)) {
+    if ($row['class'] == 1) {
+        $one_day_list = $one_day_list."<li><a href='blog.php?id={$row['pk']}'>{$row['title']}</a></li>";
+    } else {
+        $master_day_list = $master_day_list."<li><a href='blog.php?id={$row['pk']}'>{$row['title']}</a></li>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,13 +155,9 @@
                         <!-- Recent Posts -->
                         <div class="recent_posts">
                             <div class="sidebar_title"><h4>One Day Class</h4></div>
-                            <div class="sidebar_list">
+                            <div class="main_nav sidebar_list">
                                 <ul>
-                                    <li><a href="#">Make a Magnet</a></li>
-                                    <li><a href="#">Make a Bracelet</a></li>
-                                    <li><a href="#">Make a Postcard</a></li>
-                                    <li><a href="#">Video Post</a></li>
-                                    <li><a href="#">Audio Post</a></li>
+                                    <?= $one_day_list ?>
                                 </ul>
                             </div>
                         </div>
@@ -148,11 +165,9 @@
                         <!-- Categories -->
                         <div class="categories">
                             <div class="sidebar_title"><h4>Advanced Master Class</h4></div>
-                            <div class="sidebar_list">
+                            <div class="main_nav sidebar_list">
                                 <ul>
-                                    <li><a href="#">Professional Weaving Class</a></li>
-                                    <li><a href="#">Professional Dying Class</a></li>
-                                    <li><a href="#">Create your own pattern</a></li>
+                                    <?= $master_day_list ?>
                                 </ul>
                             </div>
                         </div>
@@ -186,7 +201,14 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-    })
+
+        var current_url = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+        $('.sidebar_list li').find('a').each(function (index, item) {
+            if (current_url === $(item).attr('href')) {
+                $(item).parent().addClass('active');
+            }
+        });
+    });
 
 </script>
 

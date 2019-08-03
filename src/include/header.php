@@ -50,8 +50,16 @@
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-    var CURRENT_URL = window.location.href.substring(window.location.href.lastIndexOf('/') + 1),
-        menu_navi = $('#main_nav_menu').find('a[href="' + CURRENT_URL + '"]').parent('li');
+    var CURRENT_URL = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+
+    if(CURRENT_URL.indexOf('?') != -1) {
+        CURRENT_URL = CURRENT_URL.split("?")[0];
+        console.log("find!! : "  + CURRENT_URL);
+    }
+
+    var menu_navi = $('#main_nav_menu').find('a[href="' + CURRENT_URL + '"]').parent('li');
+
+
 
     if (menu_navi.length > 0) {
         $('#main_nav_menu').find('li').each(function (idx) {

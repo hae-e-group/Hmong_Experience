@@ -259,7 +259,7 @@ input[type=number]::-webkit-outer-spin-button
 .page_nav ul li a:hover,
 .page_nav ul li.active a
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 
 /*********************************
@@ -355,7 +355,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .sidebar_list ul li a:hover
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .categories
 {
@@ -387,7 +387,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .tags_container ul li a:hover
 {
-	color: #ffa37b;
+	color: #b47bff;
 }
 .special_offer
 {
