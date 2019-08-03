@@ -12,7 +12,8 @@ $contact = array(
     'about' => '',
     'facebook' => '',
     'instagram' => '',
-    'image' => '');
+    'image' => '',
+    'skill' => '');
 
 $mode = 'create';
 
@@ -27,7 +28,30 @@ if (isset($_GET['id'])) {
     $contact['facebook'] = $row['facebook'];
     $contact['instagram'] = $row['instagram'];
     $contact['image'] = $row['image'];
+    $contact['skill'] = $row['skill'];
     $mode = 'update';
+}
+
+$result = mysqli_query($conn,"SELECT * FROM program");
+$project_list = '';
+while ($row = mysqli_fetch_array($result)) {
+    $project_list = $project_list."<option value='{$row["pk"]}'>{$row["title"]}</option>";
+}
+
+$lecture_result = '';
+if (isset($_GET['id'])) {
+    $result = mysqli_query($conn, "SELECT program_pk FROM lecturer WHERE contact_pk = '{$_GET['id']}'");
+
+    $first = true;
+
+    while ($row = mysqli_fetch_array($result)) {
+        if ($first) {
+            $first = false;
+        } else {
+            $lecture_result = $lecture_result.",";
+        }
+        $lecture_result = $lecture_result.$row['program_pk'];
+    }
 }
 
 ?>
@@ -133,6 +157,34 @@ if (isset($_GET['id'])) {
                                     </div>
 
                                     <div class="form-group">
+                                        <label for="skill" class="control-label col-md-3 col-sm-3 col-xs-12">Skill</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="skill" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="skill" value="<?= $contact['skill'] ?>" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="class"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Class</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select id="class" class="form-control">
+                                                <?= $project_list ?>
+                                            </select>
+                                        </div>
+
+                                        <button type="button" id="class_add" class="btn btn-primary">Add</button>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Lecture List</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input id="tags_1" type="text" class="tags form-control" />
+                                            <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
                                         <label for="thumb"
                                                class="control-label col-md-3 col-sm-3 col-xs-12">Image</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12" id="image_div">
@@ -149,6 +201,7 @@ if (isset($_GET['id'])) {
                                     <input type="hidden" name="mode", value="<?= $mode ?>">
                                     <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
                                     <input type="hidden" name="image" id="image" value="<?= $contact['image'] ?>" />
+                                    <input type="hidden" name="lecture" id="lecture">
 
                                 </form>
 
@@ -206,7 +259,8 @@ if (isset($_GET['id'])) {
 <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
 <!-- bootstrap-progressbar -->
 <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-
+<!-- jQuery Tags Input -->
+<script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
 
@@ -242,15 +296,54 @@ if (isset($_GET['id'])) {
     });
 
     $('.btn-success').on('click', function () {
-        $('#demo-form2').submit();
+        submit();
     });
 
     $('#delete_image').on('click', function () {
         $('#image').val('');
-        $('#demo-form2').submit();
+        submit();
     });
 
 
+
+    $('#class_add').on('click', function() {
+        $('.tags').addTag($("#class option:selected").text());
+    });
+
+    function submit() {
+        var split = $('.tags').val().split(',');
+
+        var seen = {};
+        for (var i in split) {
+            $('#class option').each(function () {
+                var txt = $(this).text();
+                if (split[i] === txt) {
+                    seen[txt] = $(this).val();
+                }
+            });
+        }
+        var classResult = '';
+        var first = true;
+        $.each(seen, function (key, value) {
+            if (first) {
+                first = false;
+            } else {
+                classResult += ',';
+            }
+            classResult += value;
+        });
+        console.log(classResult);
+        $('#lecture').val(classResult);
+        $('#demo-form2').submit();
+    }
+
+
+    $(document).ready(function () {
+        var lecture_list = '<?= $lecture_result ?>'.split(',');
+        for (var i in lecture_list) {
+            $('.tags').addTag($("#class [value=" + lecture_list[i] + "]").text());
+        }
+    });
 
 </script>
 

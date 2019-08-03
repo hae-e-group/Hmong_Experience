@@ -17,6 +17,7 @@ while ($row = mysqli_fetch_array($result)) {
                     <h4 class='brief'><i>{$row['org']}</i></h4>
                     <div class='left col-xs-7'>
                         <h2>{$row['name']}</h2>
+                        <p><strong>Skill: </strong> {$row['skill']} </p>
                         <p><strong>About: </strong> {$row['about']} </p>
                         <ul class='list-unstyled'>
                             <li><i class='fa fa-facebook'></i> Facebook: {$row['facebook']}</li>
@@ -34,7 +35,7 @@ while ($row = mysqli_fetch_array($result)) {
                                     class='fa fa-minus'>
                             </i> Delete </button>
         
-                        <a href='contacts_edit.php?id={$row['pk']}' type='button' class='btn btn-primary btn-xs'><i
+                        <a href='contacts_form.php?id={$row['pk']}' type='button' class='btn btn-primary btn-xs'><i
                                     class='fa fa-pencil'>
                             </i> Edit </a>
                     </div>
