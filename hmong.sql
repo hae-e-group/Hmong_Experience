@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- 생성 시간: 19-07-31 09:31
+-- 생성 시간: 19-08-03 06:19
 -- 서버 버전: 8.0.16
 -- PHP 버전: 7.3.7
 
@@ -65,15 +65,16 @@ CREATE TABLE `contact` (
   `about` mediumtext,
   `facebook` text,
   `instagram` text,
-  `image` text
+  `image` text,
+  `skill` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 테이블의 덤프 데이터 `contact`
 --
 
-INSERT INTO `contact` (`pk`, `name`, `org`, `about`, `facebook`, `instagram`, `image`) VALUES
-(4, 'Eunseok Hong', 'Samsung Electronic', 'I am I am I am..... ', 'eggfefef@naver.com', 'expert.hong@samsung.com', '1564584589');
+INSERT INTO `contact` (`pk`, `name`, `org`, `about`, `facebook`, `instagram`, `image`, `skill`) VALUES
+(15, 'Eunseok Hong', 'Samsung Electronic', 'DDDDD KOKOKO', 'eggfefef@naver.com', 'vdsvdsv', '', 'aa');
 
 -- --------------------------------------------------------
 
@@ -101,6 +102,26 @@ INSERT INTO `inbox` (`pk`, `name`, `email`, `subject`, `message`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 테이블 구조 `lecturer`
+--
+
+CREATE TABLE `lecturer` (
+  `pk` int(11) NOT NULL,
+  `contact_pk` int(11) NOT NULL,
+  `program_pk` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 테이블의 덤프 데이터 `lecturer`
+--
+
+INSERT INTO `lecturer` (`pk`, `contact_pk`, `program_pk`) VALUES
+(1, 14, 12),
+(9, 15, 13);
+
+-- --------------------------------------------------------
+
+--
 -- 테이블 구조 `program`
 --
 
@@ -114,16 +135,17 @@ CREATE TABLE `program` (
   `video` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   `image` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `display` tinyint(4) NOT NULL DEFAULT '1'
+  `display` tinyint(4) NOT NULL DEFAULT '1',
+  `class` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 테이블의 덤프 데이터 `program`
 --
 
-INSERT INTO `program` (`pk`, `title`, `contents`, `detail`, `price`, `time`, `video`, `image`, `display`) VALUES
-(12, 'weewfxzc', 'wefwefxcv', 'wefewxzcv', 'ewfwefxzcv', 'wefxcz', 'fewfzcxv', '', 1),
-(13, 'xcvxcv', 'sdvds', 'vsdvdsv', 'sdv', 'dsvds', 'vsdvsdvds', '', 1);
+INSERT INTO `program` (`pk`, `title`, `contents`, `detail`, `price`, `time`, `video`, `image`, `display`, `class`) VALUES
+(12, 'weewfxzc', 'wefwefxcv', 'wefewxzcv', 'ewfwefxzcv', 'wefxcz', 'fewfzcxv', '', 1, 0),
+(13, 'xcvxcv', 'sdvds', 'vsdvdsv', 'sdv', 'dsvds', 'vsdvsdvds', '', 1, 2);
 
 --
 -- 덤프된 테이블의 인덱스
@@ -148,6 +170,12 @@ ALTER TABLE `inbox`
   ADD PRIMARY KEY (`pk`);
 
 --
+-- 테이블의 인덱스 `lecturer`
+--
+ALTER TABLE `lecturer`
+  ADD PRIMARY KEY (`pk`);
+
+--
 -- 테이블의 인덱스 `program`
 --
 ALTER TABLE `program`
@@ -167,13 +195,19 @@ ALTER TABLE `book`
 -- 테이블의 AUTO_INCREMENT `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- 테이블의 AUTO_INCREMENT `inbox`
 --
 ALTER TABLE `inbox`
   MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- 테이블의 AUTO_INCREMENT `lecturer`
+--
+ALTER TABLE `lecturer`
+  MODIFY `pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 테이블의 AUTO_INCREMENT `program`
