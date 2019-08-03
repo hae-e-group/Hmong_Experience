@@ -6,7 +6,7 @@
             <nav class="main_nav" id="main_nav_menu">
                 <ul class="d-flex flex-row align-items-start justify-content-start">
                     <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="about_hmong.php">About Hmong</a></li>
+                    <li><a href="people.php">About Hmong</a></li>
                     <li><a href="pattern.php">About Patterns</a></li>
                     <li><a href="blog.php">Classes</a></li>
                     <li><a href="contact.php">Contact</a></li>
@@ -32,7 +32,7 @@
         <nav class="menu_nav text-right">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="about_hmong.php">About Hmong</a></li>
+                <li><a href="people.php">About Hmong</a></li>
                 <li><a href="pattern.php">About Patterns</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
