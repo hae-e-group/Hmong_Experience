@@ -15,6 +15,17 @@ while ($row = mysqli_fetch_array($result)) {
 	<td><a>{$row['title']}</a><br /><small>{$row['create_time']}</small></td>
 	<td><a>{$row['contents']}</a></td>";
 
+    $class_type = '';
+    if ($row['class'] == 1) {
+        $class_type = '<td><a>One Day</a></td>';
+    } else if ($row['class'] == 2) {
+        $class_type = '<td><a>Master day</a></td>';
+    } else {
+        $class_type = '<td><a>Not classified</a></td>';
+    }
+
+    $program_list = $program_list.$class_type;
+
     if ($row['display'] == "1") {
         $program_list = $program_list . "<td><button type='button' data-id='{$row['pk']}' class='btn btn-success btn-xs btn_display_h'>Show</button></td>";
     } else {
@@ -88,6 +99,7 @@ while ($row = mysqli_fetch_array($result)) {
                                         <th style="width: 1%">#</th>
                                         <th style="width: 20%">Program Name</th>
                                         <th>Contents</th>
+                                        <th>Class Type</th>
                                         <th>Display</th>
                                         <th style="width: 20%">#Edit</th>
                                     </tr>

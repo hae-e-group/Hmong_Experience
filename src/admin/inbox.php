@@ -280,7 +280,7 @@ while ($row = mysqli_fetch_array($result)) {
 
         $.ajax({
             type: "POST",
-            url : "request/get_inbox.php",
+            url : "action/get_inbox.php",
             data: { id : idx },
             dataType:"json",
             success : function(data, status, xhr) {

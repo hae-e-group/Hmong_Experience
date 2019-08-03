@@ -13,7 +13,8 @@ $program = array(
     'price' => '',
     'time' => '',
     'video' => '',
-    'image' => '');
+    'image' => '',
+    'class' => 0);
 
 $mode = 'create';
 
@@ -29,6 +30,7 @@ if (isset($_GET['id'])) {
     $program['time'] = $row['time'];
     $program['video'] = $row['video'];
     $program['image'] = $row['image'];
+    $program['class'] = $row['class'];
     $mode = 'update';
 }
 
@@ -141,6 +143,18 @@ if (isset($_GET['id'])) {
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input id="video" class="form-control col-md-7 col-xs-12" type="text"
                                                    name="video" value="<?= $program['video'] ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="class"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Class</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select id="class" class="form-control" name="class">
+                                                <option value="0">Choose option</option>
+                                                <option value="1">One day class</option>
+                                                <option value="2">Master class</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -263,6 +277,8 @@ if (isset($_GET['id'])) {
         $('#program_menu').append('<ul class="nav child_menu">' +
             '<li><a href="program_form.php">Program <?= $mode ?></a></li>' +
             '</ul>');
+
+        $('#class').val(<?= $program['class'] ?>);
     });
 </script>
 

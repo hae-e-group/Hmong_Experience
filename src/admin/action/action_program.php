@@ -15,7 +15,8 @@ $filtered = array(
     'time' => mysqli_real_escape_string($conn, $_POST['time']),
     'video' => mysqli_real_escape_string($conn, $_POST['video']),
     'image' => mysqli_real_escape_string($conn, $_POST['image']),
-    'display' => mysqli_real_escape_string($conn, $_POST['display'])
+    'display' => mysqli_real_escape_string($conn, $_POST['display']),
+    'class' => mysqli_real_escape_string($conn, $_POST['class'])
 );
 
 $mode = mysqli_real_escape_string($conn, $_POST['mode']);
@@ -23,7 +24,7 @@ $mode = mysqli_real_escape_string($conn, $_POST['mode']);
 if ($mode == "create") {
     $sql = "
      INSERT INTO program
-      (title, contents, detail, price, time, video, image)
+      (title, contents, detail, price, time, video, image, class)
       VALUES(
         '{$filtered['title']}',
         '{$filtered['contents']}',
@@ -31,7 +32,8 @@ if ($mode == "create") {
         '{$filtered['price']}',
         '{$filtered['time']}',
         '{$filtered['video']}',
-        '{$filtered['image']}'
+        '{$filtered['image']}',
+        '{$filtered['class']}'
       )
     ";
 
@@ -44,7 +46,8 @@ if ($mode == "create") {
       price = '{$filtered['price']}',
       time = '{$filtered['time']}',
       video = '{$filtered['video']}',
-      image = '{$filtered['image']}'
+      image = '{$filtered['image']}',
+      class = '{$filtered['class']}'
      WHERE pk = '{$filtered['pk']}'
     ";
 
