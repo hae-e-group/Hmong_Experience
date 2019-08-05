@@ -54,8 +54,7 @@
                 <!-- Footer images -->
                 <div class="col-lg-3">
                     <div class="certificates d-flex flex-row align-items-start justify-content-lg-between justify-content-start flex-lg-nowrap flex-wrap">
-                        <div class="cert"><img src="images/cert_1.png" alt=""></div>
-                        <div class="cert"><img src="images/cert_2.png" alt=""></div>
+                        <div class="cert"><img src="images/unesco-logo.png" alt=""></div>
                     </div>
                 </div>
             </div>
