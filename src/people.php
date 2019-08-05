@@ -1,3 +1,53 @@
+<?php
+$conn = mysqli_connect(
+    'localhost',
+    'root',
+    'q1w2e3r4',
+    'hmong');
+
+$sql = "SELECT * FROM contact";
+$result = mysqli_query($conn, $sql);
+
+$people_list = '';
+
+while ($row = mysqli_fetch_array($result)) {
+
+    $people = array(
+        'contact_id' => $row['pk'],
+        'name' => $row['name'],
+        'image' => $row['image'],
+        'about' => $row['about'],
+        'instagram' => $row['instagram'],
+        'facebook' => $row['facebook'],
+        'skill' => $row['skill']
+    );
+
+    $people_list = $people_list
+        ."<div class='test_slider_item text-center'>
+            <div class='testimonial_title'><a href='javascript:show_layer(".json_encode($people).");'>{$people['name']}</a></div>
+            <div class='testimonial_image'><a href='javascript:show_layer(".json_encode($people).");'><img src='uploads/{$people['image']}' alt=''></a></div>
+            <div class='testimonial_text'>
+                <p>{$people['about']}</p>
+            </div>";
+
+    if ($row['instagram'] != "") {
+        $people_list = $people_list
+        ."<div class='testimonial_sns_img'><img src='images/instagram_icon.jpg'></div>
+            <div class='testimonial_sns d-flex'><a href='https://www.instagram.com/{$people['instagram']}/'>Instagram</a></div>";
+    }
+
+    if ($row['facebook'] != "") {
+        $people_list = $people_list
+        ."<div class='testimonial_sns_img'><img src='images/facebook_icon.jpg'></div>
+            <div class='testimonial_sns d-flex'><a href='https://www.facebook.com/{$people['facebook']}'>Facebook</a></div>";
+    }
+
+    $people_list = $people_list."</div>";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,90 +103,7 @@
                         <div class="owl-carousel owl-theme test_slider">
 
                             <!-- Slide -->
-                            <div class="test_slider_item text-center">
-                                <div class="testimonial_title"><a href="javascript:show_layer('Yeonghan');">Yeonghan
-                                        Kwon</a></div>
-                                <div class="testimonial_image"><a href="javascript:show_layer('Yeonghan');"><img
-                                                src="images/yeong_han.jpg" alt=""></a></div>
-                                <div class="testimonial_text">
-                                    <p>He is EVP member. he likes playing and hanging out with his friends.</p>
-                                </div>
-                                <div class="testimonial_sns_img"><img src="images/instagram_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="https://www.instagram.com/honey.han_e/">Instagram</a>
-                                </div>
-                                <div class="testimonial_sns_img"><img src="images/facebook_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Facebook</a></div>
-                            </div>
-                            <!-- Slide -->
-                            <div class="test_slider_item text-center">
-                                <div class="testimonial_title"><a href="javascript:show_layer('Soobin');">Soobin Kim</a>
-                                </div>
-                                <div class="testimonial_image"><a href="javascript:show_layer('Soobin');"><img
-                                                src="images/soo_bin.jpg" alt=""></a></div>
-                                <div class="testimonial_text">
-                                    <p>She had long hair but now, she has short hair.</p>
-                                </div>
-                                <div class="testimonial_sns_img"><img src="images/instagram_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Instagram</a></div>
-                                <div class="testimonial_sns_img"><img src="images/facebook_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Facebook</a></div>
-                            </div>
-                            <!-- Slide -->
-                            <div class="test_slider_item text-center">
-                                <div class="testimonial_title"><a href="javascript:show_layer('Chulwoo');">Chulwoo
-                                        Kim</a></div>
-                                <div class="testimonial_image"><a href="javascript:show_layer('Chulwoo');"><img
-                                                src="images/chul_woo.jpg" alt=""></a></div>
-                                <div class="testimonial_text">
-                                    <p>He lives in InGyeDong the hottest place in Suwon.</p>
-                                </div>
-                                <div class="testimonial_sns_img"><img src="images/instagram_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Instagram</a></div>
-                                <div class="testimonial_sns_img"><img src="images/facebook_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Facebook</a></div>
-                            </div>
-                            <!-- Slide -->
-                            <div class="test_slider_item text-center">
-                                <div class="testimonial_title"><a href="javascript:show_layer('Eunsok');">Eunsok
-                                        Hong</a></div>
-                                <div class="testimonial_image"><a href="javascript:show_layer('Eunsok');"><img
-                                                src="images/eun_seok.jpg" alt=""></a></div>
-                                <div class="testimonial_text">
-                                    <p>He is the leader of E group. He cannot eat spicy food at all.</p>
-                                </div>
-                                <div class="testimonial_sns_img"><img src="images/instagram_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Instagram</a></div>
-                                <div class="testimonial_sns_img"><img src="images/facebook_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Facebook</a></div>
-                            </div>
-                            <!-- Slide -->
-                            <div class="test_slider_item text-center">
-                                <div class="testimonial_title"><a href="javascript:show_layer('Chulmin');">Chulmin
-                                        Yeom</a></div>
-                                <div class="testimonial_image"><a href="javascript:show_layer('Chulmin');"><img
-                                                src="images/chul_min.jpg" alt=""></a></div>
-                                <div class="testimonial_text">
-                                    <p>He is the artist of Hae. He has the mission that create high quality video.</p>
-                                </div>
-                                <div class="testimonial_sns_img"><img src="images/instagram_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Instagram</a></div>
-                                <div class="testimonial_sns_img"><img src="images/facebook_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Facebook</a></div>
-                            </div>
-                            <!-- Slide -->
-                            <div class="test_slider_item text-center">
-                                <div class="testimonial_title"><a href="javascript:show_layer('Eunsol');">Eunsol
-                                        Choi</a></div>
-                                <div class="testimonial_image"><a href="javascript:show_layer('Eunsol');"><img
-                                                src="images/eun_sol.jpg" alt=""></a></div>
-                                <div class="testimonial_text">
-                                    <p>She is in Education team. she is so ardent that she made studio in her house.</p>
-                                </div>
-                                <div class="testimonial_sns_img"><img src="images/instagram_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Instagram</a></div>
-                                <div class="testimonial_sns_img"><img src="images/facebook_icon.jpg"></div>
-                                <div class="testimonial_sns d-flex"><a href="#">Facebook</a></div>
-                            </div>
+                            <?= $people_list ?>
                         </div>
                     </div>
                 </div>
@@ -144,183 +111,32 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-        function show_layer(div_name) {
-            document.all.yeonghan.style.display = "none";
-            document.all.soobin.style.display = "none";
-            document.all.chulwoo.style.display = "none";
-            document.all.eunseok.style.display = "none";
-            document.all.chulmin.style.display = "none";
-            document.all.eunsol.style.display = "none";
-            switch (div_name) {
-                case 'Yeonghan':
-                    document.all.yeonghan.style.display = "";
-                    break;
-                case 'Soobin':
-                    document.all.soobin.style.display = "";
-                    break;
-                case 'Chulwoo':
-                    document.all.chulwoo.style.display = "";
-                    break;
-                case 'Eunsok':
-                    document.all.eunseok.style.display = "";
-                    break;
-                case 'Chulmin':
-                    document.all.chulmin.style.display = "";
-                    break;
-                case 'Eunsol':
-                    document.all.eunsol.style.display = "";
-                    break;
-            }
-        }
-    </script>
-
-    <div id=yeonghan style="DISPLAY: none">
+    <div id="people_detail_model" style="DISPLAY: none">
         <div class="container">
             <div class="about_women">
                 <div class="row d-flex">
-                    <div class="col-lg-6">
+                    <div id="image_div" class="col-lg-6">
                         <img class="about_women_img" src="images/yeong_han.jpg">
                     </div>
                     <div class="col-lg-6">
-                        <div class="about_women_title">Yeonghan Kwon</div>
-                        <p>Yeonghan is ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~
-                            ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~.</p>
+                        <div id="name_div" class="about_women_title">Yeonghan Kwon</div>
+                        <div id="about_div"><p>Yeonghan is ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~
+                                ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~.</p></div>
                         <div class="about_women_subtitle">Techniques</div>
-                        <li>Acapella (9 years)</li>
-                        <li>Taekwondo (4 Dan)</li>
-                        <li>Drum (3 months)</li>
+                        <ul id="skill_div">
+                            <li>Acapella (9 years)</li>
+                            <li>Taekwondo (4 Dan)</li>
+                            <li>Drum (3 months)</li>
+                        </ul>
+
                         <div class="about_women_subtitle">Classes</div>
-                        <li><a href="#">Fundamental Acapella</a></li>
-                        <li><a href="#">Advanced Taekwondo</a></li>
+                        <ul id="class_div">
+                            <li><a href="#">Fundamental Acapella</a></li>
+                            <li><a href="#">Advanced Taekwondo</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div id="instaPics"></div>
-            </div>
-        </div>
-    </div>
-    <div id=soobin style="DISPLAY: none">
-        <div class="about_women">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about_women_title">Soobin Kim</div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/soo_bin.jpg">
-                </div>
-                <div class="row about_row">
-                    <div class="col-lg-6">
-                        <div class="about_content">
-                            <div class="about_text">
-                                <p>My name is Soobin. My name is Soobin. My name is Soobin. My name is Soobin. My name
-                                    is Soobin. My name is Soobin. My name is Soobin. My name is Soobin. My name is
-                                    Soobin. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id=chulwoo style="DISPLAY: none">
-        <div class="about_women">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about_women_title">Chulwoo Kim</div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/chul_woo.jpg">
-                </div>
-                <div class="row about_row">
-                    <div class="col-lg-6">
-                        <div class="about_content">
-                            <div class="about_text">
-                                <p>My name is Chulwoo. My name is Chulwoo. My name is Chulwoo. My name is Chulwoo. My
-                                    name is Chulwoo. My name is Chulwoo. My name is Chulwoo. My name is Chulwoo. My name
-                                    is Chulwoo. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id=eunseok style="DISPLAY: none">
-        <div class="about_women">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about_women_title">Eunseok Hong</div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/eun_seok.jpg">
-                </div>
-                <div class="row about_row">
-                    <div class="col-lg-6">
-                        <div class="about_content">
-                            <div class="about_text">
-                                <p>My name is Eunseok. My name is Eunseok. My name is Eunseok. My name is Eunseok. My
-                                    name is Eunseok. My name is Eunseok. My name is Eunseok. My name is Eunseok. My name
-                                    is Eunseok. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id=chulmin style="DISPLAY: none">
-        <div class="about_women">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about_women_title">Chulmin Yeom</div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/chul_min.jpg">
-                </div>
-                <div class="row about_row">
-                    <div class="col-lg-6">
-                        <div class="about_content">
-                            <div class="about_text">
-                                <p>My name is Chulmin. My name is Chulmin. My name is Chulmin. My name is Chulmin. My
-                                    name is Chulmin. My name is Chulmin. My name is Chulmin. My name is Chulmin. My name
-                                    is Chulmin. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id=eunsol style="DISPLAY: none">
-        <div class="about_women">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about_women_title">Eunsol Choi</div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/eun_sol.jpg">
-                </div>
-                <div class="row about_row">
-                    <div class="col-lg-6">
-                        <div class="about_content">
-                            <div class="about_text">
-                                <p>My name is Eunsol. My name is Eunsol. My name is Eunsol. My name is Eunsol. My name
-                                    is Eunsol. My name is Eunsol. My name is Eunsol. My name is Eunsol. My name is
-                                    Eunsol. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -342,5 +158,43 @@
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="plugins/jquery-datepicker/jquery-ui.js"></script>
 <script src="js/people.js"></script>
+<script type="text/javascript">
+    function show_layer(json) {
+        $('#people_detail_model').show();
+
+        //$('#name_div').empty();
+        $('#name_div').html(json.name);
+        $('#about_div').empty();
+        $('#about_div').append('<p>' + json.about + '</p>');
+
+        $('#skill_div').empty();
+
+        var skill = json.skill.split(',');
+
+        for (i in skill) {
+            $('#skill_div').append('<li>' + skill[i] + '</li>');
+        }
+
+        $('#class_div').empty();
+
+        $.ajax({
+            type: 'POST',
+            url: 'get_class.php',
+            data: { id:json.contact_id },
+            dataType: 'json',
+            success: function(data, status, xhr) {
+                data.forEach(function (element) {
+                    $('#class_div').append('<li><a href="blog.php?id=' + element.pk + '">' + element.title + '</a></li>')
+                });
+                console.log(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR.responseText);
+                alert('fail');
+            }
+        });
+
+    }
+</script>
 </body>
 </html>
