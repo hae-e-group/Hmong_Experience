@@ -177,6 +177,9 @@ while ($row = mysqli_fetch_array($result)) {
 
         $('#class_div').empty();
 
+        $('#image_div').empty();
+        $('#image_div').append('<img class="about_women_img" src="uploads/' + json.image + '">');
+
         $.ajax({
             type: 'POST',
             url: 'get_class.php',
