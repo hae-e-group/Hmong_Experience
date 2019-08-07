@@ -81,8 +81,8 @@ while ($row = mysqli_fetch_array($result)) {
                 <div class="row">
                     <div class="col">
                         <div class="home_content text-center">
-                            <div class="home_title">Hmong Craftswomen</div>
-                            <div><p style="font-size:40px;color: #FFFFFF">Hmong Craftswomen123</p></div>
+                            <div class="home_title">People</div>
+                            <div><p style="font-size:40px;color: #FFFFFF;font-style: italic;">Find local experts and learn their craftsmanship</p></div>
                         </div>
                     </div>
                 </div>

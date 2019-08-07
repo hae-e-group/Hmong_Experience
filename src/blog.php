@@ -56,8 +56,10 @@ $row = mysqli_fetch_array($result);
                 <div class="row">
                     <div class="col">
                         <div class="home_content text-center">
-                            <div class="home_title">Classes</div>
-                            
+                            <div class="home_content text-center">
+                                <div class="home_title">Class</div>
+                                <div><p style="font-size:40px;color: #FFFFFF;font-style: italic;">Embrace nature into your bracelet with ethnic Hmong patterns</p></div>
+                            </div>
                         </div>
                     </div>
                 </div>

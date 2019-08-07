@@ -30,7 +30,7 @@
 
                 <!-- Slide -->
                 <?php
-                for ($i = 1; $i != 7; $i++) {
+                for ($i = 1; $i <= 7; $i++) {
                     echo "<div class=\"slide\">
                     <div class=\"background_image\" style=\"background-image:url(images/pattern{$i}.jpeg)\"></div>
                     <div class=\"home_container\">
@@ -89,11 +89,11 @@
                 <!-- About Content -->
                 <div class="col-lg-6">
                     <div class="about_content">
-                        <div class="about_title"><h2>HaeTae <br> One Week, One Team</h2></div>
+                        <div class="about_title"><h2>Find Hmong Experts here and learn their cultural heritage.</h2></div>
+                        <!--div class="about_title"><h2 style="color: #003eff">Learn Hmong Pattern</h2> <br /> <h2 style="color: #FF6347;">from Hmong Instructors</h2></div-->
                         <div class="about_text">
-                            <p>SAMSUNG OneWeek HaeTae. SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek
-                                HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG
-                                OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.
+                            <p>Find Hmong pattern artisans here and learn their cultural heritage onsite in Doi Pui Hmong Tribal Village in Chiang Mai.
+                                This site provides you with a list of Hmong instructors and on-site classes.
                             </p>
                         </div>
                     </div>
@@ -112,11 +112,12 @@
                 <!-- About Images -->
                 <div class="col-lg-6">
                     <div class="about_content">
-                        <div class="about_title"><h2>HaeTae <br> One Week, One Team</h2></div>
+                        <!--div class="about_title"><h2>Learn Hmong Pattern <br /> from Hmong Instructors</h2></div-->
                         <div class="about_text">
-                            <p>SAMSUNG OneWeek HaeTae. SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek
-                                HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG
-                                OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.</p>
+                            <p>The practice of embroidery continues to be passed down through generations of
+                                Hmong people and paj ndau remain important markers of Hmong ethnicity</p>
+                                <p>Cultural heritage will be revitalized and passed down to succeeding generations with the help of digitalized contents and classes.
+                            </p>
                         </div>
                     </div>
                 </div>

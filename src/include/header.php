@@ -6,9 +6,9 @@
             <nav class="main_nav" id="main_nav_menu">
                 <ul class="d-flex flex-row align-items-start justify-content-start">
                     <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="people.php">About Hmong</a></li>
-                    <li><a href="pattern.php">About Patterns</a></li>
-                    <li id = 'menu_blog'><a href="blog.php?id=24">Classes</a></li>
+                    <li><a href="people.php">People</a></li>
+                    <li><a href="pattern.php">Pattern</a></li>
+                    <li id = 'menu_blog'><a href="blog.php?id=24">Class</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
