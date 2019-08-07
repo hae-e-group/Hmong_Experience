@@ -30,7 +30,7 @@
 
                 <!-- Slide -->
                 <div class="slide">
-                    <div class="background_image" style="background-image:url(images/c2.jpg)"></div>
+                    <div class="background_image" style="background-image:url(images/main_bg.jpeg)"></div>
                     <div class="home_container">
                         <div class="container">
                             <div class="row">
@@ -88,12 +88,33 @@
                     <!--div class="about_images d-flex flex-row align-items-center justify-content-between flex-wrap"-->
                     <div class="about_images">
                         <img src="images/40252.jpg">
-                        <!--img src="images/about_2.png" alt=""-->
-                        <!--img src="images/about_3.png" alt=""-->
                     </div>
                 </div>
 
                 <!-- About Content -->
+                <div class="col-lg-6">
+                    <div class="about_content">
+                        <div class="about_title"><h2>HaeTae <br> One Week, One Team</h2></div>
+                        <div class="about_text">
+                            <p>SAMSUNG OneWeek HaeTae. SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek
+                                HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG
+                                OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.SAMSUNG OneWeek HaeTae.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Video -->
+
+    <div class="video_div">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Images -->
                 <div class="col-lg-6">
                     <div class="about_content">
                         <div class="about_title"><h2>HaeTae <br> One Week, One Team</h2></div>
@@ -105,6 +126,13 @@
                     </div>
                 </div>
 
+                <!-- About Content -->
+                <div class="col-lg-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zx0fGgkzLvA"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
 
             </div>
         </div>

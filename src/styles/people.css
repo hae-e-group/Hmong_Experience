@@ -41,10 +41,7 @@
 	left: 0;
 	width: 100%;
 }
-.home_content
-{
 
-}
 .home_title
 {
 	font-size: 72px;
@@ -52,6 +49,15 @@
 	color: #ffffff;
 	line-height: 1.2;
 }
+
+.home_sub_title
+{
+	font-size: 100px;
+	font-weight: 600;
+	color: #ffffff;
+	line-height: 1.2;
+}
+
 .booking_form_container
 {
 	width: 100%;

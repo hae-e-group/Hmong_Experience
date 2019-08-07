@@ -75,14 +75,14 @@ while ($row = mysqli_fetch_array($result)) {
     <!-- Home -->
 
     <div class="home">
-        <div class="background_image" style="background-image:url(images/hmong_background.jpg)"></div>
+        <div class="background_image" style="background-image:url(images/main_bg.jpeg)"></div>
         <div class="home_container">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="home_content text-center">
-                            <div class="home_title">Hmong Craft Women</div>
-
+                            <div class="home_title">Hmong Craftswomen</div>
+                            <div><p style="font-size:40px;color: #FFFFFF">Hmong Craftswomen123</p></div>
                         </div>
                     </div>
                 </div>
