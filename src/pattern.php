@@ -27,7 +27,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="background_image" style="background-image:url(images/main_bg.jpeg)"></div>
+		<div class="background_image" style="background-image:url(images/pattern2.jpeg)"></div>
 	</div>
 
 	<!-- About -->

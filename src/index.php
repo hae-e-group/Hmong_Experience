@@ -29,37 +29,27 @@
             <div class="owl-carousel owl-theme home_slider">
 
                 <!-- Slide -->
-                <div class="slide">
-                    <div class="background_image" style="background-image:url(images/main_bg.jpeg)"></div>
-                    <div class="home_container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="home_content text-center">
-                                        <div class="home_title">Hmong Experience</div>
+                <?php
+                for ($i = 1; $i != 7; $i++) {
+                    echo "<div class=\"slide\">
+                    <div class=\"background_image\" style=\"background-image:url(images/pattern{$i}.jpeg)\"></div>
+                    <div class=\"home_container\">
+                        <div class=\"container\">
+                            <div class=\"row\">
+                                <div class=\"col\">
+                                    <div class=\"home_content text-center\">
+                                        <div class=\"home_title\">Hmong Experience</div>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>";
+                }
+                ?>
 
-                <!-- Slide -->
-                <div class="slide">
-                    <div class="background_image" style="background-image:url(images/c1.jpg)"></div>
-                    <div class="home_container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="home_content text-center">
-                                        <div class="home_title">Hmong Experience</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
 
@@ -70,6 +60,11 @@
                         class="home_slider_custom_dots d-flex flex-row align-items-start justify-content-start">
                         <li class="home_slider_custom_dot active">01.</li>
                         <li class="home_slider_custom_dot">02.</li>
+                        <li class="home_slider_custom_dot">03.</li>
+                        <li class="home_slider_custom_dot">04.</li>
+                        <li class="home_slider_custom_dot">05.</li>
+                        <li class="home_slider_custom_dot">06.</li>
+                        <li class="home_slider_custom_dot">07.</li>
                     </ul>
                 </div>
             </div>
