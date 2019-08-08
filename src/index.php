@@ -38,7 +38,7 @@
                             <div class=\"row\">
                                 <div class=\"col\">
                                     <div class=\"home_content text-center\">
-                                        <div sytle=\"font-size: 30px\" class=\"home_title\">Find Hmong Experts here and learn their cultural heritage.</div>
+                                        <div class=\"home_title\">Find Hmong Experts here and learn their cultural heritage.</div>
 
                                     </div>
                                 </div>

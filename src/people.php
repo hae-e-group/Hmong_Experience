@@ -23,7 +23,9 @@ while ($row = mysqli_fetch_array($result)) {
         'instagram' => $row['instagram'],
         'facebook' => $row['facebook'],
         'skill' => $row['skill'],
-        'brief' => $row['brief']
+        'brief' => $row['brief'],
+        'ti_about' => $row['ti_about'],
+        'ti_name' => $row['ti_name']
     );
 
     $people_list = $people_list
@@ -70,7 +72,7 @@ $people_json = '['.$peopleArray.']';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>People</title>
+    <title>Craftswomen</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="The River template project">
@@ -94,7 +96,7 @@ $people_json = '['.$peopleArray.']';
     <!-- Home -->
 
     <div class="home">
-        <div class="background_image" style="background-image:url(images/main_bg.jpeg)"></div>
+        <div class="background_image" style="background-image:url(images/main_bg.jpeg);padding-top: 100px"></div>
         <div class="home_container">
             <div class="container">
                 <div class="row">
@@ -174,22 +176,30 @@ $people_json = '['.$peopleArray.']';
                             <div class="tab_panel">
                                 <div class="tab_panel_content">
                                     <div class="tab_text">
-                                        <div class="col-lg-6">
-                                            <div id="name_div" class="about_women_title">Yeonghan Kwon</div>
-                                            <div id="about_div"><p>Yeonghan is ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~
-                                                    ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~.</p></div>
-                                            <div class="about_women_subtitle">Techniques</div>
-                                            <ul id="skill_div">
-                                                <li>Acapella (9 years)</li>
-                                                <li>Taekwondo (4 Dan)</li>
-                                                <li>Drum (3 months)</li>
-                                            </ul>
+                                        <div class="about_women">
+                                            <div class="row d-flex">
+                                                <div id="ti_image_div" class="col-lg-6">
+                                                    <img class="about_women_img" src="images/yeong_han.jpg">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div id="ti_name_div" class="about_women_title">Yeonghan Kwon</div>
+                                                    <div id="ti_about_div"><p>Yeonghan is ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~
+                                                            ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~.</p></div>
+                                                    <div class="about_women_subtitle">เทคนิค</div>
+                                                    <ul id="ti_skill_div">
+                                                        <li>Acapella (9 years)</li>
+                                                        <li>Taekwondo (4 Dan)</li>
+                                                        <li>Drum (3 months)</li>
+                                                    </ul>
 
-                                            <div class="about_women_subtitle">Classes</div>
-                                            <ul id="class_div">
-                                                <li><a href="#">Fundamental Acapella</a></li>
-                                                <li><a href="#">Advanced Taekwondo</a></li>
-                                            </ul>
+                                                    <div class="about_women_subtitle">การเรียนการสอน</div>
+                                                    <ul id="ti_class_div">
+                                                        <li><a href="#">Fundamental Acapella</a></li>
+                                                        <li><a href="#">Advanced Taekwondo</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div id="instaPics"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,18 +256,29 @@ $people_json = '['.$peopleArray.']';
                 $('#about_div').empty();
                 $('#about_div').append('<p>' + json.about + '</p>');
 
+
+                $('#ti_name_div').html(json.ti_name);
+                $('#ti_about_div').empty();
+                $('#ti_about_div').append('<p>' + json.ti_about + '</p>');
+
                 $('#skill_div').empty();
+                $('#ti_skill_div').empty();
 
                 var skill = json.skill.split(',');
 
                 for (i in skill) {
                     $('#skill_div').append('<li>' + skill[i] + '</li>');
+                    $('#ti_skill_div').append('<li>' + skill[i] + '</li>');
                 }
 
                 $('#class_div').empty();
+                $('#ti_class_div').empty();
 
                 $('#image_div').empty();
                 $('#image_div').append('<img class="about_women_img" src="uploads/' + json.image + '">');
+
+                $('#ti_image_div').empty();
+                $('#ti_image_div').append('<img class="about_women_img" src="uploads/' + json.image + '">');
 
                 $.ajax({
                     type: 'POST',
@@ -267,7 +288,8 @@ $people_json = '['.$peopleArray.']';
                     success: function(data, status, xhr) {
                         console.log(data);
                         data.forEach(function (element) {
-                            $('#class_div').append('<li><a href="blog.php?id=' + element.pk + '">' + element.title + '</a></li>')
+                            $('#class_div').append('<li><a href="blog.php?id=' + element.pk + '">' + element.title + '</a></li>');
+                            $('#ti_class_div').append('<li><a href="blog.php?id=' + element.pk + '">' + element.title + '</a></li>');
                         });
                         console.log(data);
                     },

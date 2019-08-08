@@ -27,7 +27,7 @@
 }
 .home .background_image
 {
-	opacity: 0.28;
+	opacity: 0.5;
 }
 .home_container
 {
@@ -494,7 +494,7 @@ input[type=number]::-webkit-outer-spin-button
 	margin-bottom: 9px;
 	padding-left: 30px;
 	padding-right: 26px;
-	border: solid 2px #ffa37b;
+	border: solid 2px #b47bff;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -503,7 +503,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .tab:hover
 {
-	background: #ffa37b;
+	background: #b47bff;
 	color: #ffffff;
 }
 .tab:not(:last-child)
@@ -512,7 +512,7 @@ input[type=number]::-webkit-outer-spin-button
 }
 .tab.active
 {
-	background: #ffa37b;
+	background: #b47bff;
 	color: #FFFFFF;
 }
 .tab_panels

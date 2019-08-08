@@ -17,7 +17,9 @@ $filtered = array(
     'image' => mysqli_real_escape_string($conn, $_POST['image']),
     'skill' => mysqli_real_escape_string($conn, $_POST['skill']),
     'lecture' => mysqli_real_escape_string($conn, $_POST['lecture']),
-    'brief' => mysqli_real_escape_string($conn, $_POST['brief'])
+    'brief' => mysqli_real_escape_string($conn, $_POST['brief']),
+    'ti_name' => mysqli_real_escape_string($conn, $_POST['ti_name']),
+    'ti_about' => mysqli_real_escape_string($conn, $_POST['ti_about'])
 );
 
 $mode = mysqli_real_escape_string($conn, $_POST['mode']);
@@ -25,7 +27,7 @@ $mode = mysqli_real_escape_string($conn, $_POST['mode']);
 if ($mode == "create") {
     $sql = "
      INSERT INTO contact
-      (name, org, about, facebook, instagram, image, skill, brief)
+      (name, org, about, facebook, instagram, image, skill, brief, ti_name, ti_about)
       VALUES(
         '{$filtered['name']}',
         '{$filtered['org']}',
@@ -34,7 +36,9 @@ if ($mode == "create") {
         '{$filtered['instagram']}',
         '{$filtered['image']}',
         '{$filtered['skill']}',
-        '{$filtered['brief']}'
+        '{$filtered['brief']}',
+        '{$filtered['ti_name']}',
+        '{$filtered['ti_about']}'
       )
     ";
 
@@ -48,7 +52,9 @@ if ($mode == "create") {
       instagram = '{$filtered['instagram']}',
       image = '{$filtered['image']}',
       skill = '{$filtered['skill']}',
-      brief = '{$filtered['brief']}'
+      brief = '{$filtered['brief']}',
+      ti_name = '{$filtered['ti_name']}',
+      ti_about = '{$filtered['ti_about']}'
      WHERE pk = '{$filtered['pk']}'
     ";
 

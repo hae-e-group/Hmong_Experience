@@ -251,7 +251,6 @@ if (isset($_GET['id'])) {
     });
 
     $('.btn-success').on('click', function () {
-        $('#demo-form2').submit();
         form_submit();
     });
 

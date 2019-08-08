@@ -10,6 +10,9 @@ $result = mysqli_query($conn, $sql);
 
 $contact_list = '';
 while ($row = mysqli_fetch_array($result)) {
+
+    if ($row)
+
     $contact_list = $contact_list
         ."<div class='col-md-4 col-sm-4 col-xs-12 profile_details'>
             <div class='well profile_view'>

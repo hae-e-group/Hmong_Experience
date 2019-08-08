@@ -14,7 +14,9 @@ $contact = array(
     'instagram' => '',
     'image' => '',
     'skill' => '',
-    'brief' => '');
+    'brief' => '',
+    'ti_name' => '',
+    'ti_about' => '');
 
 $mode = 'create';
 
@@ -31,6 +33,8 @@ if (isset($_GET['id'])) {
     $contact['image'] = $row['image'];
     $contact['skill'] = $row['skill'];
     $contact['brief'] = $row['brief'];
+    $contact['ti_name'] = $row['ti_name'];
+    $contact['ti_about'] = $row['ti_about'];
     $mode = 'update';
 }
 
@@ -192,6 +196,22 @@ if (isset($_GET['id'])) {
                                         <div class="col-md-9 col-sm-9 col-xs-12">
                                             <input id="tags_1" type="text" class="tags form-control" />
                                             <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ti_name" class="control-label col-md-3 col-sm-3 col-xs-12">Ti_Name</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="ti_name" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="ti_name" value="<?= $contact['ti_name'] ?>" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ti_about" class="control-label col-md-3 col-sm-3 col-xs-12">Ti_about</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="ti_about" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="ti_about" value="<?= $contact['ti_about'] ?>" />
                                         </div>
                                     </div>
 
