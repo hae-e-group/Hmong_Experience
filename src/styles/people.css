@@ -469,3 +469,105 @@ input[type=number]::-webkit-outer-spin-button
 	font-weight: bold;
 	color: black
 }
+
+
+
+/*********************************
+6.3 Tabs
+*********************************/
+
+.tabs_container
+{
+	width: 100%;
+}
+.tab
+{
+	height: 54px;
+	background: #ffffff;
+	font-size: 14px;
+	color: #393333;
+	font-weight: 700;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	margin-bottom: 9px;
+	padding-left: 30px;
+	padding-right: 26px;
+	border: solid 2px #ffa37b;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.tab:hover
+{
+	background: #ffa37b;
+	color: #ffffff;
+}
+.tab:not(:last-child)
+{
+	margin-right: 15px;
+}
+.tab.active
+{
+	background: #ffa37b;
+	color: #FFFFFF;
+}
+.tab_panels
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 14px;
+	padding-bottom: 32px;
+}
+.tab_panel
+{
+	display: none !important;
+	width: 100%;
+	height: 100%;
+	-webkit-animation: fadeEffect 1s;
+	animation: fadeEffect 1s;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+.tab_panel.active
+{
+	display: block !important;
+}
+.tab_panel_content p:last-of-type
+{
+	margin-bottom: 0;
+}
+.tab_text
+{
+	margin-top: -2px;
+}
+.tab_text p
+{
+	font-size: 14px;
+	line-height: 2.143;
+	font-weight: 400;
+	-webkit-transform: translateY(8px);
+	-moz-transform: translateY(8px);
+	-ms-transform: translateY(8px);
+	-o-transform: translateY(8px);
+	transform: translateY(8px);
+}
+.tab_image
+{
+	width: 100%;
+}
+.tab_image img
+{
+	max-width: 100%;
+}

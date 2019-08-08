@@ -13,7 +13,8 @@ $contact = array(
     'facebook' => '',
     'instagram' => '',
     'image' => '',
-    'skill' => '');
+    'skill' => '',
+    'brief' => '');
 
 $mode = 'create';
 
@@ -29,6 +30,7 @@ if (isset($_GET['id'])) {
     $contact['instagram'] = $row['instagram'];
     $contact['image'] = $row['image'];
     $contact['skill'] = $row['skill'];
+    $contact['brief'] = $row['brief'];
     $mode = 'update';
 }
 
@@ -127,6 +129,15 @@ if (isset($_GET['id'])) {
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input id="org" class="form-control col-md-7 col-xs-12" type="text"
                                                    name="org" value="<?= $contact['org'] ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="brief"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Brief</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="brief" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="brief" value="<?= $contact['brief'] ?>">
                                         </div>
                                     </div>
 

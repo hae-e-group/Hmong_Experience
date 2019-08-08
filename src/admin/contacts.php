@@ -18,6 +18,7 @@ while ($row = mysqli_fetch_array($result)) {
                     <div class='left col-xs-7'>
                         <h2>{$row['name']}</h2>
                         <p><strong>Skill: </strong> {$row['skill']} </p>
+                        <p><strong>Brief: </strong> {$row['brief']} </p>
                         <p><strong>About: </strong> {$row['about']} </p>
                         <ul class='list-unstyled'>
                             <li><i class='fa fa-facebook'></i> Facebook: {$row['facebook']}</li>

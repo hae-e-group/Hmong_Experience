@@ -38,7 +38,7 @@
                             <div class=\"row\">
                                 <div class=\"col\">
                                     <div class=\"home_content text-center\">
-                                        <div class=\"home_title\">Hmong Experience</div>
+                                        <div sytle=\"font-size: 30px\" class=\"home_title\">Find Hmong Experts here and learn their cultural heritage.</div>
 
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                 <div class="col-lg-6">
                     <!--div class="about_images d-flex flex-row align-items-center justify-content-between flex-wrap"-->
                     <div class="about_images">
-                        <img src="images/40252.jpg">
+                        <img src="images/phen_family.jpeg">
                     </div>
                 </div>
 

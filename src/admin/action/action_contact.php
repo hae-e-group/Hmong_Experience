@@ -17,6 +17,7 @@ $filtered = array(
     'image' => mysqli_real_escape_string($conn, $_POST['image']),
     'skill' => mysqli_real_escape_string($conn, $_POST['skill']),
     'lecture' => mysqli_real_escape_string($conn, $_POST['lecture']),
+    'brief' => mysqli_real_escape_string($conn, $_POST['brief'])
 );
 
 $mode = mysqli_real_escape_string($conn, $_POST['mode']);
@@ -24,7 +25,7 @@ $mode = mysqli_real_escape_string($conn, $_POST['mode']);
 if ($mode == "create") {
     $sql = "
      INSERT INTO contact
-      (name, org, about, facebook, instagram, image, skill)
+      (name, org, about, facebook, instagram, image, skill, brief)
       VALUES(
         '{$filtered['name']}',
         '{$filtered['org']}',
@@ -32,7 +33,8 @@ if ($mode == "create") {
         '{$filtered['facebook']}',
         '{$filtered['instagram']}',
         '{$filtered['image']}',
-        '{$filtered['skill']}'
+        '{$filtered['skill']}',
+        '{$filtered['brief']}'
       )
     ";
 
@@ -45,7 +47,8 @@ if ($mode == "create") {
       facebook = '{$filtered['facebook']}',
       instagram = '{$filtered['instagram']}',
       image = '{$filtered['image']}',
-      skill = '{$filtered['skill']}'
+      skill = '{$filtered['skill']}',
+      brief = '{$filtered['brief']}'
      WHERE pk = '{$filtered['pk']}'
     ";
 
