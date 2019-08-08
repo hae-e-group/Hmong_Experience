@@ -47,19 +47,18 @@
     <div class="pattern_brief">
         <div class="container">
             <div class="row">
-
                 <!-- About Images -->
                 <div class="col-lg-6">
                     <img height="500px" width="400px" src="images/pattern_history.jpeg">
                 </div>
-
                 <!-- About Content -->
                 <div class="col-lg-6">
                     <div class="pattern_brief_title">The patterns are not just commercial product.</div>
                     <div class="pattern_brief_content">
                         They are Hmong's history and The Hmong's 
                         spirit in the patterns are passed down to succeeding generations with unique values in
-                        the patterns. Hmong textiles are primary agent of culture, language and identity.
+                        the patterns. Hmong textiles are primary agent of culture, language and identity.</br>
+                        รูปแบบไม่ได้เป็นเพียงผลิตภัณฑ์เชิงพาณิชย์พวกเขาเป็นประวัติศาสตร์ของม้งและจิตวิญญาณของม้งในรูปแบบถูกส่งผ่านไปยังคนรุ่นต่อ ๆ ไปด้วยค่านิยมที่ไม่ซ้ำกันในรูปแบบ ม้งทอเป็นตัวแทนหลักของวัฒนธรรมภาษาและเอกลักษณ์
                     </div>
                 </div>
 
