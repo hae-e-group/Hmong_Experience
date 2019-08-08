@@ -25,51 +25,49 @@
     <!-- Home -->
 
     <div class="home">
-        <div class="home_slider_container">
-            <div class="owl-carousel owl-theme home_slider">
+        <div class="row" style="height:90%">
+            <div class="col-lg-8">
 
-                <!-- Slide -->
-                <?php
-                for ($i = 1; $i <= 7; $i++) {
-                    echo "<div class=\"slide\">
-                    <div class=\"background_image\" style=\"background-image:url(images/pattern{$i}.jpeg)\"></div>
-                    <div class=\"home_container\">
-                        <div class=\"container\">
-                            <div class=\"row\">
-                                <div class=\"col\">
-                                    <div class=\"home_content text-center\">
-                                        <div class=\"home_title\">Find Hmong Experts here and learn their cultural heritage.</div>
+                    <div class="home_slider_container">
+                        <div class="owl-carousel owl-theme home_slider">
+                            <!-- Slide -->
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/main_bg.jpeg)"></div>
+                            </div>
 
-                                    </div>
-                                </div>
+                            <!-- Slide -->
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/c1.jpg)"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- Home Slider Dots -->
+                        <div class="home_slider_dots_container">
+                            <div class="home_slider_dots">
+                                <ul id="home_slider_custom_dots"
+                                    class="home_slider_custom_dots d-flex flex-row align-items-start justify-content-start">
+                                    <li class="home_slider_custom_dot active">01.</li>
+                                    <li class="home_slider_custom_dot">02.</li>
+                                </ul>
                             </div>
                         </div>
+
                     </div>
-                </div>";
-                }
-                ?>
+            </div> <!--col-->
 
+            <div class="col-lg-4">
+                <div class="about_content">
+                            <div class="about_title" style="margin-top:30%;"><h2>Find Hmong craftswomen here and learn their cultural heritage.</h2></div>
+                            <div class="about_text">
+                                <p>Find Hmong pattern artisans here and learn their cultural heritage onsite in Doi Pui Hmong Tribal Village in Chiang Mai.
+                                This site provides you with a list of Hmong instructors and on-site classes.
+                                </p>
+                            </div>
+                </div>  
+            </div> <!--col-->
 
-
-            </div>
-
-            <!-- Home Slider Dots -->
-            <div class="home_slider_dots_container">
-                <div class="home_slider_dots">
-                    <ul id="home_slider_custom_dots"
-                        class="home_slider_custom_dots d-flex flex-row align-items-start justify-content-start">
-                        <li class="home_slider_custom_dot active">01.</li>
-                        <li class="home_slider_custom_dot">02.</li>
-                        <li class="home_slider_custom_dot">03.</li>
-                        <li class="home_slider_custom_dot">04.</li>
-                        <li class="home_slider_custom_dot">05.</li>
-                        <li class="home_slider_custom_dot">06.</li>
-                        <li class="home_slider_custom_dot">07.</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+        </div> <!--row-->
     </div>
 
     <!-- About -->
