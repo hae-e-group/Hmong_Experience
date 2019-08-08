@@ -1,3 +1,32 @@
+<?php
+$conn = mysqli_connect(
+    'localhost',
+    'root',
+    'q1w2e3r4',
+    'hmong');
+
+$sql = "select p.pk, p.title, p.image, p.overview, c.name from lecturer l left join contact c on l.contact_pk = c.pk left join program p on l.program_pk = p.pk where c.name is not null";
+$result = mysqli_query($conn, $sql);
+
+$program_list = '';
+while ($row = mysqli_fetch_array($result)) {
+    $program_list = $program_list
+        ."<div class=\"booking_item text-center\">
+                                <div class=\"booking_title\"><a href=\"class.php?id={$row['pk']}\">{$row['title']}</a></div>
+                                <div class=\"booking_image\"><img src=\"uploads/{$row['image']}\" alt=\"\"></div>
+                                <div class=\"booking_text\">
+                                    <p>{$row['overview']}</p>
+                                </div>
+
+                                <div class=\"booking_author\"><a href=\"class.php?id={$row['pk']}\">{$row['name']}</a>, {$row['ti_name']}</div>
+                            </div>";
+}
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,41 +183,7 @@
                     <div class="booking_slider_container">
                         <div class="owl-carousel owl-theme booking_slider">
 
-                            <!-- Slide -->
-                            <div class="booking_item text-center">
-                                <div class="booking_title"><a href="#">Make a Magnet</a></div>
-                                <div class="booking_image"><img src="images/magnet_300x300.jpg" alt=""></div>
-                                <div class="booking_text">
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet
-                                        tellus blandit. Etiam nec odio vestibulum est mattis effic.</p>
-                                </div>
-
-                                <div class="booking_author"><a href="#">Samantha Smith</a>, Greece</div>
-                            </div>
-
-                            <!-- Slide -->
-                            <div class="booking_item text-center">
-                                <div class="booking_title"><a href="#">Make a Bracelet</a></div>
-                                <div class="booking_image"><img src="images/bracelet_300x300.jpg" alt=""></div>
-                                <div class="booking_text">
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet
-                                        tellus blandit. Etiam nec odio vestibulum est mattis effic.</p>
-                                </div>
-
-                                <div class="booking_author"><a href="#">Samantha Smith</a>, Greece</div>
-                            </div>
-
-                            <!-- Slide -->
-                            <div class="booking_item text-center">
-                                <div class="booking_title"><a href="#">Make a Postcard</a></div>
-                                <div class="booking_image"><img src="images/postcard_300x300.jpg" alt=""></div>
-                                <div class="booking_text">
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet
-                                        tellus blandit. Etiam nec odio vestibulum est mattis effic.</p>
-                                </div>
-
-                                <div class="booking_author"><a href="#">Samantha Smith</a>, Greece</div>
-                            </div>
+                            <?= $program_list ?>
 
                         </div>
                     </div>

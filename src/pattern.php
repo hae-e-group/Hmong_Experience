@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-lg-6">
                     <!-- Single pattern meaning -->
-                    <div id="seeds" style="DISPLAY: none">
+                    <div id="seeds">
                         <div class="pattern_meaning_title">Seeds(เมล็ดพันธุ์พืช)</div>
                         <div class="pattern_meaning_content">
                             This pattern is created from seeds.</br>

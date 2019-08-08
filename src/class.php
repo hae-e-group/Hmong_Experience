@@ -12,9 +12,9 @@ $one_day_list = '';
 $master_day_list = '';
 while ($row = mysqli_fetch_array($result)) {
     if ($row['class'] == 1) {
-        $one_day_list = $one_day_list."<li><a href='blog.php?id={$row['pk']}'>{$row['title']}</a></li>";
+        $one_day_list = $one_day_list."<li><a href='class.php?id={$row['pk']}'>{$row['title']}</a></li>";
     } else {
-        $master_day_list = $master_day_list."<li><a href='blog.php?id={$row['pk']}'>{$row['title']}</a></li>";
+        $master_day_list = $master_day_list."<li><a href='class.php?id={$row['pk']}'>{$row['title']}</a></li>";
     }
 }
 

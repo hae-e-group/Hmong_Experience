@@ -288,8 +288,8 @@ $people_json = '['.$peopleArray.']';
                     success: function(data, status, xhr) {
                         console.log(data);
                         data.forEach(function (element) {
-                            $('#class_div').append('<li><a href="blog.php?id=' + element.pk + '">' + element.title + '</a></li>');
-                            $('#ti_class_div').append('<li><a href="blog.php?id=' + element.pk + '">' + element.title + '</a></li>');
+                            $('#class_div').append('<li><a href="class.php?id=' + element.pk + '">' + element.title + '</a></li>');
+                            $('#ti_class_div').append('<li><a href="class.php?id=' + element.pk + '">' + element.title + '</a></li>');
                         });
                         console.log(data);
                     },

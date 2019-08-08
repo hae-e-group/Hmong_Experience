@@ -15,7 +15,8 @@ $filtered = array(
     'cost' => mysqli_real_escape_string($conn, $_POST['cost']),
     'start_date' => mysqli_real_escape_string($conn, $_POST['start_date']),
     'display' => mysqli_real_escape_string($conn, $_POST['display']),
-    'class' => mysqli_real_escape_string($conn, $_POST['class'])
+    'class' => mysqli_real_escape_string($conn, $_POST['class']),
+    'overview' => mysqli_real_escape_string($conn, $_POST['overview'])
 );
 
 $mode = mysqli_real_escape_string($conn, $_POST['mode']);
@@ -23,7 +24,7 @@ $mode = mysqli_real_escape_string($conn, $_POST['mode']);
 if ($mode == "create") {
     $sql = "
      INSERT INTO program
-      (title, detail, image, duration, cost, start_date, class)
+      (title, detail, image, duration, cost, start_date, class, overview)
       VALUES(
         '{$filtered['title']}',
         '{$filtered['detail']}',
@@ -31,7 +32,8 @@ if ($mode == "create") {
         '{$filtered['duration']}',
         '{$filtered['cost']}',
         '{$filtered['start_date']}',
-        '{$filtered['class']}'
+        '{$filtered['class']}',
+        '{$filtered['overview']}'
       )
     ";
 
@@ -44,7 +46,8 @@ if ($mode == "create") {
       duration = '{$filtered['duration']}',
       cost = '{$filtered['cost']}',
       start_date = '{$filtered['start_date']}',
-      class = '{$filtered['class']}'
+      class = '{$filtered['class']}',
+      overview = '{$filtered['overview']}'
      WHERE pk = '{$filtered['pk']}'
     ";
 

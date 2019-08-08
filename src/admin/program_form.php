@@ -13,6 +13,7 @@ $program = array(
     'duration' => '',
     'cost' => '',
     'start_date' => '',
+    'overview' => '',
     'class' => 0);
 
 $mode = 'create';
@@ -29,6 +30,7 @@ if (isset($_GET['id'])) {
     $program['cost'] = $row['cost'];
     $program['start_date'] = $row['start_date'];
     $program['class'] = $row['class'];
+    $program['overview'] = $row['overview'];
     $mode = 'update';
 }
 
@@ -144,6 +146,15 @@ if (isset($_GET['id'])) {
                                                class="control-label col-md-3 col-sm-3 col-xs-12">Detail</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <textarea id="detail" name="detail"><?= $program['detail'] ?></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="overview"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Overview</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="overview" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="overview" value="<?= $program['overview'] ?>">
                                         </div>
                                     </div>
 

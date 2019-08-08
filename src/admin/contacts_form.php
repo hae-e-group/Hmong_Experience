@@ -223,7 +223,7 @@ if (isset($_GET['id'])) {
                                             if ($contact['image'] == '') {
                                                 echo "<p class='form-control col-md-7 col-xs-12'>None</p>";
                                             } else {
-                                                echo "<img src='uploads/{$contact['image']}' class='col-md-7 col-xs-12' />";
+                                                echo "<img src='../uploads/{$contact['image']}' class='col-md-7 col-xs-12' />";
                                             }
                                             ?>
                                         </div>
