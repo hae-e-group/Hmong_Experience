@@ -69,11 +69,11 @@
                 <!-- Contact Content -->
                 <div class="col-lg-6">
                     <div class="contact_content">
-                        <div class="contact_title"><h2>Get in touch</h2></div>
+                        <div class="contact_title"><h2>Contact us</h2></div>
                         <div class="contact_list">
                             <ul>
                                 <li>M239 ถนน ห้วยแก้ว Tambon Su Thep, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai
-                                    50200, 태국
+                                    50200, Thailand
                                 </li>
                                 <li>+546 990221 123</li>
                                 <li>hae@haetae.com</li>
