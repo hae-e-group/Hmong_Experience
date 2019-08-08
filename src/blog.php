@@ -80,7 +80,7 @@ $row = mysqli_fetch_array($result);
                         <br><br>
                             <div class="row">                             
                                 <div class="blog_post_image col-5">
-                                    <img src="images/magnet_300x300.jpg" alt="">
+                                    <img src="uploads/<?= $row['image'] ?>" alt="">
                                     <!--div class="blog_post_date"><a href="#">Oct 20, 2018</a></div-->
                                 </div>
                                 <div class="details_list col-7">
