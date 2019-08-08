@@ -80,18 +80,19 @@
                 <div class="col-lg-6">
                     <!--div class="about_images d-flex flex-row align-items-center justify-content-between flex-wrap"-->
                     <div class="about_images">
-                        <img src="images/phen_family.jpeg">
+                        <img src="images/map.jpg">
                     </div>
                 </div>
 
                 <!-- About Content -->
                 <div class="col-lg-6">
                     <div class="about_content">
-                        <div class="about_title"><h2>Find Hmong Experts here and learn their cultural heritage.</h2></div>
+                        <!--<<div class="about_title"><h2>Find Hmong Experts here and learn their cultural heritage.</h2></div>-->
                         <!--div class="about_title"><h2 style="color: #003eff">Learn Hmong Pattern</h2> <br /> <h2 style="color: #FF6347;">from Hmong Instructors</h2></div-->
                         <div class="about_text">
-                            <p>Find Hmong pattern artisans here and learn their cultural heritage onsite in Doi Pui Hmong Tribal Village in Chiang Mai.
-                                This site provides you with a list of Hmong instructors and on-site classes.
+                            <p> Hmong had written many documentary books but they were lost during evacuation from wars. 
+                                To avoid loss of those historical stories and wisdom, Hmong used patterns and attached them onto women's skirts.
+                                Today the patterns on the skirts are interpreted in many direction.
                             </p>
                         </div>
                     </div>
