@@ -1,10 +1,29 @@
-.pattern_title
+.pattern_brief
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.pattern_brief_title
+{
+    margin-top: 10%;
+    font-size: 35px;
+    color: black;
+}
+.pattern_brief_content
+{
+    font-size: 20px;
+}
+.pattern_meaning
+{
+    padding-bottom: 50px;
+}
+.pattern_meaning_title
 {
     margin-top: 60px;
     font-size: 35px;
     color: black;
 }
-.pattern_content
+.pattern_meaning_content
 {
     font-size: 20px;
 }

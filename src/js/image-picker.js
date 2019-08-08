@@ -322,15 +322,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       key: "clicked",
       value: function clicked(event) {
         this.picker.toggle(this, event);
+        // jQuery('select.image-picker>option').each(function(){
+        //   jQuery('#'+this.value).css("display", "none")
+        // })
+        // if (selected_list.length == 2) {
+        //   jQuery('#' + get_selected_list_id()).css("display", "none")
+        // }
+        // manage_selected_list(this.value())
+        // if (selected_list.length > 0) {
+        //   jQuery('#' + get_selected_list_id()).css("display", "")
+        // }
         jQuery('select.image-picker>option').each(function(){
           jQuery('#'+this.value).css("display", "none")
         })
-        if (selected_list.length == 2) {
-          jQuery('#' + get_selected_list_id()).css("display", "none")
-        }
-        manage_selected_list(this.value())
-        if (selected_list.length > 0) {
-          jQuery('#' + get_selected_list_id()).css("display", "")
+        if (this.is_selected()) {
+          jQuery('#' + this.value()).css("display", "")
         }
         if (this.opts.clicked != null) {
           this.opts.clicked.call(this.picker.select, this, event);

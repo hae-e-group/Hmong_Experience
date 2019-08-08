@@ -44,28 +44,22 @@
 
     <!-- About -->
 
-    <div class="about">
+    <div class="pattern_brief">
         <div class="container">
             <div class="row">
 
                 <!-- About Images -->
                 <div class="col-lg-6">
-                    <!--div class="about_images d-flex flex-row align-items-center justify-content-between flex-wrap"-->
-                    <div class="about_images">
-                        <img height="500px" width="400px" src="images/pattern_history.jpeg">
-                    </div>
+                    <img height="500px" width="400px" src="images/pattern_history.jpeg">
                 </div>
 
                 <!-- About Content -->
                 <div class="col-lg-6">
-                    <div class="about_content">
-                        <div class="about_title"><h2>The patterns are not just commercial product.</h2></div>
-                        <div class="about_text">
-                            <p>They are Hmong's history and The Hmong's
-                                spirit in the patterns are passed down to succeeding generations with unique values in
-                                the patterns. Hmong textiles are primary agent of culture, language and identity.
-                            </p>
-                        </div>
+                    <div class="pattern_brief_title">The patterns are not just commercial product.</div>
+                    <div class="pattern_brief_content">
+                        They are Hmong's history and The Hmong's 
+                        spirit in the patterns are passed down to succeeding generations with unique values in
+                        the patterns. Hmong textiles are primary agent of culture, language and identity.
                     </div>
                 </div>
 
@@ -75,88 +69,158 @@
 
     <!-- About -->
 
-    <div class="about">
+    <div class="pattern_meaning">
         <div class="container">
             <div class="row d-flex">
                 <div class="col-lg-6">
                     <div class="about_title">The Hmong Patterns</div>
                     <!-- Hmong Pattern List -->
-                    <select class="image-picker show-html" data-limit="2" multiple="multiple">
-                        <option data-img-src="images/patterns/snail.JPG" value="snail">snail</option>
-                        <option data-img-src="images/patterns/elephant_foot.JPG" value="elephant_foot">elephant_foot
-                        </option>
-                        <option data-img-src="images/patterns/house.JPG" value="house">house</option>
-                        <option data-img-src="images/patterns/mountain.jpg" value="mountain">mountain</option>
-                        <option data-img-src="images/patterns/quarter.JPG" value="quarter">quarter</option>
-                        <option data-img-src="images/patterns/snail_chev.JPG" value="snail_chev">snail_chev</option>
-                        <option data-img-src="images/patterns/step.JPG" value="step">step</option>
-                        <option data-img-src="images/patterns/x.JPG" value="x">x</option>
+                    <select class="image-picker show-html"> <!-- data-limit="1" multiple="multiple"> -->
+                        <option data-img-src="images/patterns/seeds.jpg" value="seeds">Seeds</option>
+                        <option data-img-src="images/patterns/chicken_feet.jpg" value="chicken_feet">Chicken_feet</option>
+                        <option data-img-src="images/patterns/diamond.jpg" value="diamond">Diamond</option>
+                        <option data-img-src="images/patterns/dragons_tails.jpg" value="dragons_tails">Dragons_tails</option>
+                        <option data-img-src="images/patterns/house.jpg" value="house">House</option>
+                        <option data-img-src="images/patterns/leaf_frond.jpg" value="leaf_frond">Leaf_frond</option>
+                        <option data-img-src="images/patterns/mountain.jpg" value="mountain">Mountain</option>
+                        <option data-img-src="images/patterns/rams_horn.jpg" value="rams_horn">Rams_horn</option>
+                        <option data-img-src="images/patterns/tigers_claw.jpg" value="tigers_claw">Tigers_claw</option>
+                        <option data-img-src="images/patterns/cocks_comb.jpg" value="cocks_comb">Cocks_comb</option>
+                        <option data-img-src="images/patterns/cucumber_seeds.jpg" value="cucumber_seeds">Cucumber_seeds</option>
+                        <option data-img-src="images/patterns/fish_scale.jpg" value="fish_scale">Fish_scale</option>
+                        <option data-img-src="images/patterns/vegetable_blossom.jpg" value="vegetable_blossom">Vegetable_blossom</option>
                     </select>
                 </div>
                 <div class="col-lg-6">
                     <!-- Single pattern meaning -->
-                    <div id="snail" style="DISPLAY: none">
-                        <div class="pattern_title">Snail</div>
-                        <div class="pattern_content">
-                            This pattern is created from snail.</br>
-                            It means Wisdom.
+                    <div id="seeds" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Seeds(เมล็ดพันธุ์พืช)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from seeds.</br>
+                            It means "Abundance".</br>
+                            รูปแบบนี้สร้างจากเมล็ด</br>
+                            มันหมายถึงความอุดมสมบูรณ์</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/seeds.jpg">
                         </div>
                     </div>
-                    <div id="elephant_foot" style="DISPLAY: none">
-                        <div class="pattern_title">Elephant's foot</div>
-                        <div class="pattern_content">
-                            This pattern is created from Elephant's foot.</br>
-                            It means Prosperity.
+                    <div id="chicken_feet" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Chicken's feet(เท้าไก่)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from chicken's feet.</br>
+                            It means "Guide to spirit world".</br>
+                            รูปแบบนี้สร้างขึ้นจากเท้าของไก่</br>
+                            มันหมายถึง "คู่มือสู่โลกวิญญาณ"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/chicken_feet.jpg">
+                        </div>
+                    </div>
+                    <div id="diamond" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Diamond(เพชร)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from diamond.</br>
+                            It means "Earth"</br>
+                            ลวดลายนี้สร้างขึ้นจากเพชร</br>
+                            มันหมายถึง "โลก"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/diamond.jpg">
+                        </div>
+                    </div>
+                    <div id="dragons_tails" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Dragon's tails(หางมังกร)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from dragon's tails.</br>
+                            It means "Power".</br>
+                            รูปแบบนี้สร้างจากหางของมังกร</br>
+                            มันหมายถึง "พลังงาน"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/dragons_tails.jpg">
                         </div>
                     </div>
                     <div id="house" style="DISPLAY: none">
-                        <div class="pattern_title">House</div>
-                        <div class="pattern_content">
-                            This pattern is created from House.</br>
-                            It means Unity
+                        <div class="pattern_meaning_title">House(บ้าน)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from house.</br>
+                            It means "Unity".</br>
+                            ลวดลายนี้สร้างขึ้นจากบ้าน</br>
+                            มันหมายถึง "ความสามัคคี"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/house.jpg">
+                        </div>
+                    </div>
+                    <div id="leaf_frond" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Leaf's frond(ใบของใบ)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from leaf's frond.</br>
+                            It means "Growth".</br>
+                            รูปแบบนี้ถูกสร้างขึ้นจากใบของใบ</br>
+                            มันหมายถึง "การเติบโต"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/leaf_frond.jpg">
                         </div>
                     </div>
                     <div id="mountain" style="DISPLAY: none">
-                        <div class="pattern_title">Mountain</div>
-                        <div class="pattern_content">
-                            This pattern is created from Mountain.</br>
-                            It means Strength.
+                        <div class="pattern_meaning_title">Mountain(ภูเขา)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from mountain.</br>
+                            It means "Strength".</br>
+                            ลวดลายนี้สร้างจากภูเขา</br>
+                            มันหมายถึง "ความแข็งแกร่ง"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/mountain.jpg">
                         </div>
                     </div>
-                    <div id="quarter" style="DISPLAY: none">
-                        <div class="pattern_title">Quarter</div>
-                        <div class="pattern_content">
-                            This pattern is created from Quarter.</br>
-                            It means Harmony.
+                    <div id="rams_horn" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Ram's horn(เขาแกะ)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from ram's horn.</br>
+                            It means "Wisdom".</br>
+                            ลวดลายนี้ถูกสร้างขึ้นจากเขาแกะ</br>
+                            มันหมายถึง "ปัญญา"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/rams_horn.jpg">
                         </div>
                     </div>
-                    <div id="snail_chev" style="DISPLAY: none">
-                        <div class="pattern_title">Snail_chev</div>
-                        <div class="pattern_content">
-                            This pattern is created from Snail_chev.</br>
-                            It means Family.
+                    <div id="cocks_comb" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Cock's comb(หวีของไก่)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from cocks's tails.</br>
+                            It means "Superior".</br>
+                            รูปแบบนี้ถูกสร้างขึ้นจากหางของไก่ชน</br>
+                            มันหมายถึง "Superior"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/cocks_comb.jpg">
                         </div>
                     </div>
-                    <div id="step" style="DISPLAY: none">
-                        <div class="pattern_title">Step</div>
-                        <div class="pattern_content">
-                            This pattern is created from Step.</br>
-                            It means Development.
+                    <div id="vegetable_blossom" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Vegetable blossom(ดอกผัก)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is create from vegetable blossom.</br>
+                            It means "Prosperity".</br>
+                            รูปแบบนี้ถูกสร้างขึ้นจากดอกผัก</br>
+                            มันหมายถึง "ความเจริญรุ่งเรือง"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/vegetable_blossom.jpg">
                         </div>
                     </div>
-                    <div id="x" style="DISPLAY: none">
-                        <div class="pattern_title">X</div>
-                        <div class="pattern_content">
-                            This pattern is created from X.</br>
-                            It means Adventure.
+                    <div id="fish_scale" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Fish's scale(เกล็ดปลา)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is created from fish's scale.</br>
+                            It means "Flexibility".</br>
+                            รูปแบบนี้ถูกสร้างขึ้นจากใบของใบ</br>
+                            มันหมายถึง "ความยืดหยุ่น"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/fish_scale.jpg">
                         </div>
                     </div>
-                    <!-- Combination pattern meaning -->
-                    <div id="mountain-snail" style="DISPLAY: none">
-                        <div class="pattern_title">KING</div>
-                        <div class="pattern_content">
-                            This combination means "KING"</br>
-                            In history, The great kings had strength and wisdom.
+                    <div id="tigers_claw" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Tiger's claw(กรงเล็บเสือ)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is create from tiger claws.</br>
+                            It means "Brave".</br>
+                            ลวดลายนี้สร้างจากกรงเล็บเสือ</br>
+                            มันหมายถึง "กล้าหาญ"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/tigers_claw.jpg">
+                        </div>
+                    </div>
+                    <div id="cucumber_seeds" style="DISPLAY: none">
+                        <div class="pattern_meaning_title">Cucumbers seeds(เมล็ดแตงกวา)</div>
+                        <div class="pattern_meaning_content">
+                            This pattern is create from cucumbers seeds.</br>
+                            It means "Fresh".</br>
+                            รูปแบบนี้สร้างจากเมล็ดแตงกวา</br>
+                            มันหมายถึง "สด"</br>
+                            <img style="width:80%; height:80%;" src="images/patterns/cucumber_seeds.jpg">
                         </div>
                     </div>
                 </div>
