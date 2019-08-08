@@ -89,7 +89,10 @@ $row = mysqli_fetch_array($result);
                                         <li><?= $row['cost'] ?></li>
                                         <li><?= $row['start_date'] ?></li>
                                     </ul>
+
+                                    <div class="button button_1"><a href="booking_program.php">Book</a></div>
                                 </div>
+
                             </div>
 
                             <div class="blog_post_content">

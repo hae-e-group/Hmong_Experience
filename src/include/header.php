@@ -8,11 +8,11 @@
                     <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="people.php">Craftswomen</a></li>
                     <li><a href="pattern.php">Pattern</a></li>
-                    <li id = 'menu_blog'><a href="blog.php?id=24">Class</a></li>
+                    <li id='menu_blog'><a href="blog.php?id=24">Class</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
-            <div class="book_button"><a href="booking_program.php">Book Online</a></div>
+            <!--div class="book_button"><a href="booking_program.php">Book Online</a></div-->
             <div class="header_phone d-flex flex-row align-items-center justify-content-center">
                 <img src="images/phone.png" alt="">
                 <span>0183-12345678</span>

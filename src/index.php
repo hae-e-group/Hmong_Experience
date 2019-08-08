@@ -139,14 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="booking_title text-center"><h2>Book a Program</h2></div>
-                    <div class="booking_text text-center">
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                            Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum lacus suscipit sit.
-                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                            Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum lacus suscipit
-                            sit.</p>
-                    </div>
+                    <div class="booking_title text-center"><h2>Book a Class</h2></div>
 
                     <!-- Booking Slider -->
                     <div class="booking_slider_container">
