@@ -5,7 +5,7 @@ $conn = mysqli_connect(
     'q1w2e3r4',
     'hmong');
 
-$sql = "select p.pk, p.title, p.image, p.overview, c.name from lecturer l left join contact c on l.contact_pk = c.pk left join program p on l.program_pk = p.pk where c.name is not null";
+$sql = "select p.pk, p.title, p.image, p.overview, c.name, c.ti_name from lecturer l left join contact c on l.contact_pk = c.pk left join program p on l.program_pk = p.pk where c.name is not null";
 $result = mysqli_query($conn, $sql);
 
 $program_list = '';
