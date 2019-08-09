@@ -99,6 +99,9 @@
                             It means "Abundance".</br>
                             รูปแบบนี้สร้างจากเมล็ด</br>
                             มันหมายถึงความอุดมสมบูรณ์</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/seeds.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/seeds.jpg">
                         </div>
                     </div>
@@ -109,6 +112,9 @@
                             It means "Guide to spirit world".</br>
                             รูปแบบนี้สร้างขึ้นจากเท้าของไก่</br>
                             มันหมายถึง "คู่มือสู่โลกวิญญาณ"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/chicken_feet.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/chicken_feet.jpg">
                         </div>
                     </div>
@@ -119,6 +125,9 @@
                             It means "Earth"</br>
                             ลวดลายนี้สร้างขึ้นจากเพชร</br>
                             มันหมายถึง "โลก"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/diamond.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/diamond.jpg">
                         </div>
                     </div>
@@ -129,6 +138,9 @@
                             It means "Power".</br>
                             รูปแบบนี้สร้างจากหางของมังกร</br>
                             มันหมายถึง "พลังงาน"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/dragons_tails.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/dragons_tails.jpg">
                         </div>
                     </div>
@@ -139,6 +151,9 @@
                             It means "Unity".</br>
                             ลวดลายนี้สร้างขึ้นจากบ้าน</br>
                             มันหมายถึง "ความสามัคคี"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/house.JPG" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/house.JPG">
                         </div>
                     </div>
@@ -149,6 +164,9 @@
                             It means "Growth".</br>
                             รูปแบบนี้ถูกสร้างขึ้นจากใบของใบ</br>
                             มันหมายถึง "การเติบโต"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/leaf_frond.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/leaf_frond.jpg">
                         </div>
                     </div>
@@ -159,6 +177,9 @@
                             It means "Strength".</br>
                             ลวดลายนี้สร้างจากภูเขา</br>
                             มันหมายถึง "ความแข็งแกร่ง"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/mountain.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/mountain.jpg">
                         </div>
                     </div>
@@ -169,6 +190,9 @@
                             It means "Wisdom".</br>
                             ลวดลายนี้ถูกสร้างขึ้นจากเขาแกะ</br>
                             มันหมายถึง "ปัญญา"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/rams_horn.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/rams_horn.jpg">
                         </div>
                     </div>
@@ -179,6 +203,9 @@
                             It means "Superior".</br>
                             รูปแบบนี้ถูกสร้างขึ้นจากหางของไก่ชน</br>
                             มันหมายถึง "Superior"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/cocks_comb.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/cocks_comb.jpg">
                         </div>
                     </div>
@@ -189,6 +216,9 @@
                             It means "Prosperity".</br>
                             รูปแบบนี้ถูกสร้างขึ้นจากดอกผัก</br>
                             มันหมายถึง "ความเจริญรุ่งเรือง"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/vegetable_blossom.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/vegetable_blossom.jpg">
                         </div>
                     </div>
@@ -199,6 +229,9 @@
                             It means "Flexibility".</br>
                             รูปแบบนี้ถูกสร้างขึ้นจากใบของใบ</br>
                             มันหมายถึง "ความยืดหยุ่น"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/fish_scale.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/fish_scale.jpg">
                         </div>
                     </div>
@@ -209,6 +242,9 @@
                             It means "Brave".</br>
                             ลวดลายนี้สร้างจากกรงเล็บเสือ</br>
                             มันหมายถึง "กล้าหาญ"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/tigers_claw.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/tigers_claw.jpg">
                         </div>
                     </div>
@@ -219,10 +255,39 @@
                             It means "Fresh".</br>
                             รูปแบบนี้สร้างจากเมล็ดแตงกวา</br>
                             มันหมายถึง "สด"</br>
+                            <br/>
+                            <div class="button button_1"><a href="images/patterns/cucumber_seeds.jpg" download>Download</a></div>
+                            <br/>
                             <img style="width:80%; height:80%;" src="images/patterns/cucumber_seeds.jpg">
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video_div">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Content -->
+                <div class="col-lg-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lP2f1lLuhFk"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- About Images -->
+                <div class="col-lg-6">
+                    <div class="about_content">
+                        <!--div class="about_title"><h2>Learn Hmong Pattern <br /> from Hmong Instructors</h2></div-->
+                        <div class="about_text">
+                            <p>Hmongcl offers various Hmong patterns and their meanings. Patterns that were transmitted only by word of mouth and only in memory are documented, so anyone can easily see and follow, which is very helpful for the transmission of culture heritage.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
