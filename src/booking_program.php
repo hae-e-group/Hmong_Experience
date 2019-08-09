@@ -52,7 +52,7 @@ while ($row = mysqli_fetch_array($result)) {
 				<div class="row">
 					<div class="booking-form">
 						<div class="form-header">
-							<h1>Book a program</h1>
+							<h1>Book a class</h1>
 						</div>
 						<form id="bookingForm" method="POST">
 							<div class="row">
@@ -140,7 +140,7 @@ while ($row = mysqli_fetch_array($result)) {
 							<div class="row">
 								<div class="col-sm-5">
 									<div class="form-group">
-										<span class="form-label">Program</span>
+										<span class="form-label">Class</span>
 										<select class="form-control" id="program" name="program">
 											<?=$program_list?>
 										</select>
