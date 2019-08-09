@@ -79,7 +79,7 @@
                         <option data-img-src="images/patterns/chicken_feet.jpg" value="chicken_feet">Chicken_feet</option>
                         <option data-img-src="images/patterns/diamond.jpg" value="diamond">Diamond</option>
                         <option data-img-src="images/patterns/dragons_tails.jpg" value="dragons_tails">Dragons_tails</option>
-                        <option data-img-src="images/patterns/house.jpg" value="house">House</option>
+                        <option data-img-src="images/patterns/house.JPG" value="house">House</option>
                         <option data-img-src="images/patterns/leaf_frond.jpg" value="leaf_frond">Leaf_frond</option>
                         <option data-img-src="images/patterns/mountain.jpg" value="mountain">Mountain</option>
                         <option data-img-src="images/patterns/rams_horn.jpg" value="rams_horn">Rams_horn</option>
