@@ -15,7 +15,7 @@
             <!--div class="book_button"><a href="booking_program.php">Book Online</a></div-->
             <div class="header_phone d-flex flex-row align-items-center justify-content-center">
                 <img src="images/phone.png" alt="">
-                <span>0183-12345678</span>
+                <span>+662-247-7537</span>
             </div>
 
             <!-- Hamburger Menu -->
@@ -43,7 +43,7 @@
         <div class="menu_book text-right"><a href="#">Book online</a></div>
         <div class="menu_phone d-flex flex-row align-items-center justify-content-center">
             <img src="images/phone-2.png" alt="">
-            <span>0183-12345678</span>
+            <span>+662-247-7537</span>
         </div>
     </div>
 </div>

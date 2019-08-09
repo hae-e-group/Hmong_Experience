@@ -139,7 +139,7 @@
                             It means "Unity".</br>
                             ลวดลายนี้สร้างขึ้นจากบ้าน</br>
                             มันหมายถึง "ความสามัคคี"</br>
-                            <img style="width:80%; height:80%;" src="images/patterns/house.jpg">
+                            <img style="width:80%; height:80%;" src="images/patterns/house.JPG">
                         </div>
                     </div>
                     <div id="leaf_frond" style="DISPLAY: none">
