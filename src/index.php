@@ -54,6 +54,7 @@ while ($row = mysqli_fetch_array($result)) {
     <!-- Home -->
 
     <div class="home">
+        <div class="container">
         <div class="row">
             <div class="col-lg-8">
                 <div class="home_slider_container">
@@ -105,6 +106,7 @@ while ($row = mysqli_fetch_array($result)) {
                 </div>  
             </div> <!--col-->
         </div> <!-- row -->
+        </div>
     </div>
 
     <!-- About -->
