@@ -47,6 +47,7 @@ $row = mysqli_fetch_array($result);
 
     <?php include('include/header.php') ?>
 
+
     <!-- Home -->
 
     <div class="home">
@@ -67,17 +68,30 @@ $row = mysqli_fetch_array($result);
         </div>
     </div>
 
+
     <!-- Blog -->
     <div class="blog">
         <div class="container">
             <div class="row">
+                <!-- Blog -->
+                <div class="col-lg-9">
+
+                </div>
+
+
+
                 <!-- Blog Posts -->
                 <div class="col-lg-9">
                     <div class="blog_posts">
                         <!-- Blog Post -->
                         <div class="blog_post">
                         <div class="blog_post_title"><a href="#"><?= $row['title'] ?></a></div>
-                        <br><br>
+                        <br>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lP2f1lLuhFk"
+                                        allowfullscreen></iframe>
+                            </div>
+                        <br>
                             <div class="row">                             
                                 <div class="blog_post_image col-5">
                                     <img src="uploads/<?= $row['image'] ?>" alt="">
