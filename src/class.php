@@ -88,7 +88,7 @@ $row = mysqli_fetch_array($result);
                         <div class="blog_post_title"><a href="#"><?= $row['title'] ?></a></div>
                         <br>
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lP2f1lLuhFk"
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rf4z-yITe5E"
                                         allowfullscreen></iframe>
                             </div>
                         <br>
