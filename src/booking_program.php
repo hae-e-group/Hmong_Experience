@@ -141,7 +141,7 @@ while ($row = mysqli_fetch_array($result)) {
 								<div class="col-sm-5">
 									<div class="form-group">
 										<span class="form-label">Program</span>
-										<select class="form-control" name="program">
+										<select class="form-control" id="program" name="program">
 											<?=$program_list?>
 										</select>
 										<span class="select-arrow"></span>
@@ -216,6 +216,10 @@ while ($row = mysqli_fetch_array($result)) {
 			}
 		});
 	}
+
+	$(document).ready(function () {
+        $('#program').val(<?= $_GET['id'] ?>);
+    });
 	</script>
 	
 	

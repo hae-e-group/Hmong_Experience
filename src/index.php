@@ -55,57 +55,57 @@ while ($row = mysqli_fetch_array($result)) {
 
     <div class="home">
         <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="home_slider_container">
-                    <div class="owl-carousel owl-theme home_slider">
-                        <!-- Slide -->
-                        <div class="slide">
-                            <div class="background_image" style="background-image:url(images/main_bg.jpeg); opacity: 0.7"></div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <!--div class="home_slider_container"-->
+                        <div class="owl-carousel owl-theme home_slider">
+                            <!-- Slide -->
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/main_bg.jpeg); opacity: 0.7"></div>
+                            </div>
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/pattern1.jpeg); opacity: 0.7"></div>
+                            </div>
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/pattern2.jpeg); opacity: 0.7"></div>
+                            </div>
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/pattern3.jpeg); opacity: 0.7"></div>
+                            </div>
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/pattern4.jpeg); opacity: 0.7"></div>
+                            </div>
+                            <div class="slide">
+                                <div class="background_image" style="background-image:url(images/pattern5.jpeg); opacity: 0.7"></div>
+                            </div>
                         </div>
-                        <div class="slide">
-                            <div class="background_image" style="background-image:url(images/pattern1.jpeg); opacity: 0.7"></div>
+                        <!-- Home Slider Dots -->
+                        <div class="home_slider_dots_container">
+                            <div class="home_slider_dots">
+                                <ul id="home_slider_custom_dots"
+                                    class="home_slider_custom_dots d-flex flex-row align-items-start justify-content-start">
+                                    <li class="home_slider_custom_dot active">01.</li>
+                                    <li class="home_slider_custom_dot">02.</li>
+                                    <li class="home_slider_custom_dot">03.</li>
+                                    <li class="home_slider_custom_dot">04.</li>
+                                    <li class="home_slider_custom_dot">05.</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="slide">
-                            <div class="background_image" style="background-image:url(images/pattern2.jpeg); opacity: 0.7"></div>
-                        </div>
-                        <div class="slide">
-                            <div class="background_image" style="background-image:url(images/pattern3.jpeg); opacity: 0.7"></div>
-                        </div>
-                        <div class="slide">
-                            <div class="background_image" style="background-image:url(images/pattern4.jpeg); opacity: 0.7"></div>
-                        </div>
-                        <div class="slide">
-                            <div class="background_image" style="background-image:url(images/pattern5.jpeg); opacity: 0.7"></div>
-                        </div>
-                    </div>
-                    <!-- Home Slider Dots -->
-                    <div class="home_slider_dots_container">
-                        <div class="home_slider_dots">
-                            <ul id="home_slider_custom_dots"
-                                class="home_slider_custom_dots d-flex flex-row align-items-start justify-content-start">
-                                <li class="home_slider_custom_dot active">01.</li>
-                                <li class="home_slider_custom_dot">02.</li>
-                                <li class="home_slider_custom_dot">03.</li>
-                                <li class="home_slider_custom_dot">04.</li>
-                                <li class="home_slider_custom_dot">05.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--col-->
+                    <!--/div-->
+                </div> <!--col-->
 
-            <div class="col-lg-4">
-                <div class="about_content">
-                    <div class="about_title" style="vertical-align:middle"><h2>Find Hmong craftswomen here and learn their cultural heritage.</h2></div>
-                    <div class="about_text">
-                        <p>Find Hmong pattern artisans here and learn their cultural heritage onsite in Doi Pui Hmong Tribal Village in Chiang Mai.
-                        This site provides you with a list of Hmong instructors and on-site classes.
-                        </p>
+                <div class="col-lg-4">
+                    <div class="about_content">
+                        <div class="about_title" style="vertical-align:middle"><h2>Find Hmong craftswomen here and learn their cultural heritage.</h2></div>
+                        <div class="about_text">
+                            <p>Find Hmong pattern artisans here and learn their cultural heritage onsite in Doi Pui Hmong Tribal Village in Chiang Mai.
+                            This site provides you with a list of Hmong instructors and on-site classes.
+                            </p>
+                        </div>
                     </div>
-                </div>  
-            </div> <!--col-->
-        </div> <!-- row -->
+                </div> <!--col-->
+            </div> <!-- row -->
         </div>
     </div>
 
